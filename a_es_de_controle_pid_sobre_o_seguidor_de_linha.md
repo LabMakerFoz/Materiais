@@ -141,8 +141,8 @@ Estas regras devem ser testadas e experimentadas para o caso do Seguidor de Linh
 Referências
 -----------
 
-1. (#cite_ref-OGATA_1-0) OGATA, Katsuhiko. Engenharia de Controle Moderno, LTC, 2011.
-2. (#cite_ref-LabGaragem_2-0) [2,1](#cite_ref-LabGaragem_2-1) <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
+1. OGATA, Katsuhiko. Engenharia de Controle Moderno, LTC, 2011.
+2. <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
 ---
 
 Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Ações_de_Controle_PID_sobre_o_Seguidor_de_Linha&oldid=29638>”
