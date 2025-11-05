@@ -1,23 +1,5 @@
 # Arduino
 
-Índice
-------
-
-* [1 Arduíno](#Arduíno)
-  + [1.1 Algumas placas Arduino](#Algumas_placas_Arduino)
-  + [1.2 Hardware do Arduíno UNO [1]](#Hardware_do_Arduíno_UNO_[1])
-    - [1.2.1 Voltagens de alimentação](#Voltagens_de_alimentação)
-    - [1.2.2 Entradas e Saídas](#Entradas_e_Saídas)
-  + [1.3 Ambiente de desenvolvimento do Arduíno](#Ambiente_de_desenvolvimento_do_Arduíno)
-  + [1.4 SimulIDE: Ambiente de simulação para Arduíno](#SimulIDE:_Ambiente_de_simulação_para_Arduíno)
-    - [1.4.1 Programação do Arduíno no SimulIDE](#Programação_do_Arduíno_no_SimulIDE)
-      * [1.4.1.1 Uso do compilador no próprio SimulIDE](#Uso_do_compilador_no_próprio_SimulIDE)
-    - [1.4.2 Binários compilados](#Binários_compilados)
-  + [1.5 Referências](#Referências)
-
-Arduíno
-=======
-
 Descrição
 :   O Arduino é um microcontrolador montado em uma plataforma de prototipagem eletrônica de hardware livre que pode ser utilizado em múltiplas aplicações. O **Arduino** é facilmente programável através de uma **interface de programação** (**IDE**) e pode ser utilizado para automação de dispositivos eletrônicos, acionamento de motores e leds, monitoramento de sensores, construção de protótipos de soluções tecnológicas e um mundo de possibilidades.
 
