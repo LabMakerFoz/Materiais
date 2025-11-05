@@ -1,52 +1,12 @@
 # Ações de Controle PID sobre o Seguidor de Linha
 
-Índice
-------
-
-* [1 Ações de Controle PID sobre o Seguidor de Linha](#Ações_de_Controle_PID_sobre_o_Seguidor_de_Linha)
-  + [1.1 Ação de Controle Proporcional](#Ação_de_Controle_Proporcional)
-  + [1.2 Ação de Controle Proporcional Integral](#Ação_de_Controle_Proporcional_Integral)
-    - [1.2.1 Hipótese I: Análise sobre a ação do controle integral](#Hipótese_I:_Análise_sobre_a_ação_do_controle_integral)
-    - [1.2.2 Problema I: Verificação da ação do controle integral](#Problema_I:_Verificação_da_ação_do_controle_integral)
-    - [1.2.3 Tempo integral](#Tempo_integral)
-      * [1.2.3.1 Hipótese II: Delimitação do tempo integral na pista do Seguidor de Linha](#Hipótese_II:_Delimitação_do_tempo_integral_na_pista_do_Seguidor_de_Linha)
-      * [1.2.3.2 Problema II: Teste do tempo integral](#Problema_II:_Teste_do_tempo_integral)
-  + [1.3 Ação de Controle Proporcional Derivativa](#Ação_de_Controle_Proporcional_Derivativa)
-    - [1.3.1 Hipótese III: Análise sobre a ação do controle derivativo](#Hipótese_III:_Análise_sobre_a_ação_do_controle_derivativo)
-    - [1.3.2 Problema III: Verificação da ação do controle derivativo](#Problema_III:_Verificação_da_ação_do_controle_derivativo)
-    - [1.3.3 Tempo Derivativo](#Tempo_Derivativo)
-      * [1.3.3.1 Problema IV: Verificação da ação do tempo derivativo](#Problema_IV:_Verificação_da_ação_do_tempo_derivativo)
-  + [1.4 Ajuste dos parâmetros do controlador PID](#Ajuste_dos_parâmetros_do_controlador_PID)
-    - [1.4.1 Regras de sintonia de Ziegler-Nichols](#Regras_de_sintonia_de_Ziegler-Nichols)
-      * [1.4.1.1 Problema V: Pesquisa e teste da sintonia de Ziegler-Nichols](#Problema_V:_Pesquisa_e_teste_da_sintonia_de_Ziegler-Nichols)
-  + [1.5 Referências](#Referências)
-
-Ações de Controle PID sobre o Seguidor de Linha
-===============================================
-
 Ação de Controle Proporcional
 -----------------------------
 
 A ação de **controle proporcional** do Seguidor de Linha vai corrigir a trajetória do robô, ajustando a velocidades dos motores a partir de um **ganho Kp**, proporcional ao **erro**:
 
 ```
-        C
-        o
-        n
-        t
-        r
-        o
-        l
-        e
-        P
-        =
-        K
-        p
-        ∗
-        e
-        r
-        r
-        o
+        Controle P = Kp ∗ erro
       
     
     {\displaystyle ControleP=Kp*erro}
@@ -56,22 +16,10 @@ A ação de **controle proporcional** do Seguidor de Linha vai corrigir a trajet
 
 Caso o robô derive para esquerda, a velocidade dos motores é ajustada para que o robô volte para a linha:
 
-* a **velocidade do motor esquerdo** é **acrescida** do valor **K
-  p
-  ∗
-  e
-  r
-  r
-  o
+* a **velocidade do motor esquerdo** é **acrescida** do valor **Kp ∗ erro
   {\displaystyle Kp\*erro}
   ![{\displaystyle Kp*erro}](https://wikimedia.org/api/rest_v1/media/math/render/svg/6e1c6aa5f32683c95eebc18be10087379f60e00d)**;
-* a **velocidade do motor direito** é **diminuída** do valor **K
-  p
-  ∗
-  e
-  r
-  r
-  o
+* a **velocidade do motor direito** é **diminuída** do valor **Kp ∗ erro
   {\displaystyle Kp\*erro}
   ![{\displaystyle Kp*erro}](https://wikimedia.org/api/rest_v1/media/math/render/svg/6e1c6aa5f32683c95eebc18be10087379f60e00d)**.
 
@@ -105,33 +53,7 @@ Caso de uma CURVA
 :   Inicialmente somente o controle proporcional atua, ajustando a trajetória do robô à curva. Entretanto, **a medida que o somatório do erro cresce**, o **controle integral** passa a atuar. A partir de um dado momento, o **controle integral** passa a prevalecer, fazendo o robô **acompanhar a curva** com **erro instantâneo zero**, portanto, sem ação proporcional.
 
 ```
-        C
-        o
-        n
-        t
-        r
-        o
-        l
-        e
-        P
-        I
-        =
-        K
-        p
-        ∗
-        e
-        r
-        r
-        o
-        +
-        K
-        i
-        ∗
-        ∑
-        e
-        r
-        r
-        o
+        ControlePI = K ∗ erro + Ki ∗ ∑ erro
       
     
     {\displaystyle ControlePI=Kp*erro+Ki*\sum erro}
@@ -164,33 +86,7 @@ Ação de Controle Proporcional Derivativa
 A ação do **controle derivativo** é proporcional a **taxa de variação do erro** atuante. Vai ter ação, portanto, nos **períodos transitórios** quando o **erro cresce ou diminui**.
 
 ```
-        C
-        o
-        n
-        t
-        r
-        o
-        l
-        e
-        P
-        D
-        =
-        K
-        p
-        ∗
-        e
-        r
-        r
-        o
-        +
-        K
-        d
-        ∗
-        Δ
-        e
-        r
-        r
-        o
+        Controle PD = Kp ∗ erro + Kd ∗ Δerro
       
     
     {\displaystyle ControlePD=Kp*erro+Kd*\Delta erro}
@@ -245,13 +141,8 @@ Estas regras devem ser testadas e experimentadas para o caso do Seguidor de Linh
 Referências
 -----------
 
-1. [↑](#cite_ref-OGATA_1-0) OGATA, Katsuhiko. Engenharia de Controle Moderno, LTC, 2011.
-2. ↑ [2,0](#cite_ref-LabGaragem_2-0) [2,1](#cite_ref-LabGaragem_2-1) <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
-
----
-
---[Evandro.cantu](/wiki/index.php/Usu%C3%A1rio:Evandro.cantu "Usuário:Evandro.cantu") ([discussão](/wiki/index.php?title=Usu%C3%A1rio_Discuss%C3%A3o:Evandro.cantu&action=edit&redlink=1 "Usuário Discussão:Evandro.cantu (página inexistente)")) 22h04min de 18 de outubro de 2018 (BRT)
-
+1. (#cite_ref-OGATA_1-0) OGATA, Katsuhiko. Engenharia de Controle Moderno, LTC, 2011.
+2. (#cite_ref-LabGaragem_2-0) [2,1](#cite_ref-LabGaragem_2-1) <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
 ---
 
 Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Ações_de_Controle_PID_sobre_o_Seguidor_de_Linha&oldid=29638>”
