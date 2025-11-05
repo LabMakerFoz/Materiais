@@ -172,8 +172,8 @@ O binário `ino.with_bootloader.standard.hex` é utilizado quando se usa um **pr
 Referências
 -----------
 
-1. [↑](#cite_ref-1) <https://www.arduino.cc/en/Main/ArduinoBoardUno>
-2. [↑](#cite_ref-2) <https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
+1. <https://www.arduino.cc/en/Main/ArduinoBoardUno>
+2. <https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
 
 ---
 
