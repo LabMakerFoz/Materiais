@@ -1,19 +1,5 @@
 # Robotica
 
-Índice
-------
-
-* [1 Robótica](#Robótica)
-  + [1.1 Objetivo](#Objetivo)
-  + [1.2 Oficina de Robótica com Arduíno](#Oficina_de_Robótica_com_Arduíno)
-    - [1.2.1 Materiais sobre robótica com Arduíno](#Materiais_sobre_robótica_com_Arduíno)
-  + [1.3 Seguidor de Linha com controle PID](#Seguidor_de_Linha_com_controle_PID)
-  + [1.4 Robótica com Lego Mindstorms](#Robótica_com_Lego_Mindstorms)
-  + [1.5 Referências](#Referências)
-
-Robótica
-========
-
 Objetivo
 --------
 
