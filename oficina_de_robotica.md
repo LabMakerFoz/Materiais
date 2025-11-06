@@ -1,27 +1,5 @@
 # Oficina de Robotica
 
-Índice
-------
-
-* [1 Oficina de Robótica](#Oficina_de_Robótica)
-  + [1.1 Objetivo](#Objetivo)
-  + [1.2 Conteúdo da oficina sobre robótica com Arduíno](#Conteúdo_da_oficina_sobre_robótica_com_Arduíno)
-    - [1.2.1 Aula 1](#Aula_1)
-    - [1.2.2 Aula 2](#Aula_2)
-    - [1.2.3 Aula 3](#Aula_3)
-    - [1.2.4 Aula 4](#Aula_4)
-  + [1.3 Controle dos Motores](#Controle_dos_Motores)
-    - [1.3.1 Circuito Integrado L298N](#Circuito_Integrado_L298N)
-    - [1.3.2 Módulo Ponte H L298N](#Módulo_Ponte_H_L298N)
-    - [1.3.3 Programa exemplo para teste dos motores com módulo Ponte H L298](#Programa_exemplo_para_teste_dos_motores_com_módulo_Ponte_H_L298)
-  + [1.4 Sensor de Linha Infra Vermelho](#Sensor_de_Linha_Infra_Vermelho)
-    - [1.4.1 Teste do sensor Infra Vermelho](#Teste_do_sensor_Infra_Vermelho)
-  + [1.5 Programa Seguidor de Linha 2022](#Programa_Seguidor_de_Linha_2022)
-  + [1.6 Referências](#Referências)
-
-Oficina de Robótica
-===================
-
 Objetivo
 --------
 
