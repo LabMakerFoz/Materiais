@@ -176,5 +176,3 @@ Referências
 2. <https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
 
 ---
-
-Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Arduino&oldid=30291>”
