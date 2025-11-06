@@ -1,25 +1,5 @@
 # Seguidor de Linha com controle PID
 
-Índice
-------
-
-* [1 Seguidor de Linha com controle PID](#Seguidor_de_Linha_com_controle_PID)
-  + [1.1 Teoria sobre Sistemas de Controle PID](#Teoria_sobre_Sistemas_de_Controle_PID)
-  + [1.2 Ações de Controle PID sobre o Seguidor de Linha](#Ações_de_Controle_PID_sobre_o_Seguidor_de_Linha)
-  + [1.3 Controle de velocidade de robô Seguidor de Linha](#Controle_de_velocidade_de_robô_Seguidor_de_Linha)
-  + [1.4 Hardware do Robô Seguidor de Linha](#Hardware_do_Robô_Seguidor_de_Linha)
-    - [1.4.1 Arduíno Micro](#Arduíno_Micro)
-    - [1.4.2 Vetor de sensores QTR-8](#Vetor_de_sensores_QTR-8)
-    - [1.4.3 Drive para Motor DC L9110](#Drive_para_Motor_DC_L9110)
-  + [1.5 Outros protótipos de hardware testados](#Outros_protótipos_de_hardware_testados)
-    - [1.5.1 Ajuste de parâmetros via Bluetooth](#Ajuste_de_parâmetros_via_Bluetooth)
-    - [1.5.2 Vetor de Sensores e Determinação do Erro](#Vetor_de_Sensores_e_Determinação_do_Erro)
-  + [1.6 Materiais sobre Seguidor de Linha com controle PID](#Materiais_sobre_Seguidor_de_Linha_com_controle_PID)
-  + [1.7 Referências](#Referências)
-
-Seguidor de Linha com controle PID
-==================================
-
 Teoria sobre Sistemas de Controle PID
 -------------------------------------
 
@@ -182,11 +162,3 @@ Referências
 -----------
 
 1. ↑ [1,0](#cite_ref-LabGaragem_1-0) [1,1](#cite_ref-LabGaragem_1-1) <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
-
----
-
---[Evandro.cantu](/wiki/index.php/Usu%C3%A1rio:Evandro.cantu "Usuário:Evandro.cantu") ([discussão](/wiki/index.php?title=Usu%C3%A1rio_Discuss%C3%A3o:Evandro.cantu&action=edit&redlink=1 "Usuário Discussão:Evandro.cantu (página inexistente)")) 08h58min de 16 de maio de 2018 (BRT)
-
----
-
-Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Seguidor_de_Linha_com_controle_PID&oldid=29637>”
