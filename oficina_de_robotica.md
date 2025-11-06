@@ -316,7 +316,3 @@ Referências
 -----------
 
 1. [↑](#cite_ref-FelipeFlop_1-0)  FelipeFlop. Motor DC com Driver Ponte H L298N, 2013. <https://www.filipeflop.com/blog/motor-dc-arduino-ponte-h-l298n/>
-
----
-
-Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Oficina_de_Robotica&oldid=30742>”
