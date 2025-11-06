@@ -327,8 +327,3 @@ Referências
 -----------
 
 1. [↑](#cite_ref-1) <https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
-
----
----
-
-Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Arduino:_Entradas_e_Saidas&oldid=31196>”
