@@ -1,23 +1,5 @@
 # Sistemas de Controle
 
-Índice
-------
-
-* [1 Sistemas de Controle](#Sistemas_de_Controle)
-  + [1.1 Controle On / Off](#Controle_On_/_Off)
-  + [1.2 Controle Proporcional](#Controle_Proporcional)
-  + [1.3 Controle Integral](#Controle_Integral)
-    - [1.3.1 Ação de controle integral](#Ação_de_controle_integral)
-  + [1.4 Controle Proporcional Integral](#Controle_Proporcional_Integral)
-    - [1.4.1 Erro estacionário do controle proporcional](#Erro_estacionário_do_controle_proporcional)
-  + [1.5 Controle Proporcional Derivativo](#Controle_Proporcional_Derivativo)
-    - [1.5.1 Ação do controle derivativo](#Ação_do_controle_derivativo)
-  + [1.6 Controle Proporcional Integral Derivativo](#Controle_Proporcional_Integral_Derivativo)
-  + [1.7 Referências](#Referências)
-
-Sistemas de Controle
-====================
-
 Referência principal
 :   OGATA, Katsuhiko. Engenharia de Controle Moderno, 5a Ed, Pearson, 2011. [[1]](#cite_note-OGATA-1).
 
@@ -47,56 +29,13 @@ O **controle proporcional** ajusta a ação de controle de forma **proporcional 
 [![](./img/ControleProporcional.png)](/wiki/index.php/Arquivo:ControleProporcional.png)
 
 ```
-        u
-        (
-        t
-        )
-        =
-        
-          K
-          
-            p
-          
-        
-        e
-        (
-        t
-        )
-      
-    
-    {\displaystyle u(t)=K_{p}e(t)}
-  
-![{\displaystyle u(t)=K_{p}e(t)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/48a3e3e99fe6d694ac0cb7f00e0e51cf6642a345)
+        u(t) = Kp  e(t)
 ```
 
 **Função de Transferência** (Transformada de Laplace):
 
 ```
-              U
-              
-                s
-              
-            
-            
-              E
-              
-                s
-              
-            
-          
-        
-        =
-        
-          K
-          
-            p
-          
-        
-      
-    
-    {\displaystyle {U_{s} \over E_{s}}=K_{p}}
-  
-![{\displaystyle {U_{s} \over E_{s}}=K_{p}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8e18dfc79678090196033df20c5ef9c98d588344)
+              Us Es = Kp
 ```
 
 A ação de **controle proporcional** funciona como um **amplificador com ganho variável**, proporcional ao erro.
@@ -109,72 +48,13 @@ O **controle integral** ajusta a ação de controle em função ao **somatório 
 [![](./img/ControleIntegral.png)](/wiki/index.php/Arquivo:ControleIntegral.png)
 
 ```
-        u
-        (
-        t
-        )
-        =
-        
-          K
-          
-            i
-          
-        
-        
-          ∫
-          
-            0
-          
-          
-            t
-          
-        
-        e
-        (
-        t
-        )
-        d
-        t
-      
-    
-    {\displaystyle u(t)=K_{i}\int _{0}^{t}e(t)dt}
-  
-![{\displaystyle u(t)=K_{i}\int _{0}^{t}e(t)dt}](https://wikimedia.org/api/rest_v1/media/math/render/svg/e5e55527201f2a542ad2d177a86cfd39825fab4c)
+        u(t) = Ki ∫ 0t e(t)dt
 ```
 
 **Função de Transferência** (Transformada de Laplace):
 
 ```
-              U
-              
-                s
-              
-            
-            
-              E
-              
-                s
-              
-            
-          
-        
-        =
-        
-          
-            
-              K
-              
-                i
-              
-            
-            s
-          
-        
-      
-    
-    {\displaystyle {U_{s} \over E_{s}}={K_{i} \over s}}
-  
-![{\displaystyle {U_{s} \over E_{s}}={K_{i} \over s}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/65d6bb0d003ac159c861e5aedb2a3980a77abbfa)
+              Us Es = Kis
 ```
 
 ### Ação de controle integral
@@ -195,58 +75,7 @@ O controle proporcional integral combina a ação de controle proporcional e int
 [![](./img/ControlePI.png)](/wiki/index.php/Arquivo:ControlePI.png)
 
 ```
-        u
-        (
-        t
-        )
-        =
-        
-          K
-          
-            p
-          
-        
-        e
-        (
-        t
-        )
-        +
-        
-          
-            
-              K
-              
-                p
-              
-            
-            
-              T
-              
-                i
-              
-            
-          
-        
-        
-          ∫
-          
-            0
-          
-          
-            t
-          
-        
-        e
-        (
-        t
-        )
-        d
-        t
-      
-    
-    {\displaystyle u(t)=K_{p}e(t)+{K_{p} \over T_{i}}\int _{0}^{t}e(t)dt}
-  
-![{\displaystyle u(t)=K_{p}e(t)+{K_{p} \over T_{i}}\int _{0}^{t}e(t)dt}](https://wikimedia.org/api/rest_v1/media/math/render/svg/bbb40e70453fbc82f1a0117cc3353f9a739564b7)
+        u(t)  Kp e(t) + Kp Ti ∫ 0t e(t) dt
 ```
 
 onde, Ti é o tempo integral.
@@ -254,49 +83,7 @@ onde, Ti é o tempo integral.
 **Função de Transferência** (Transformada de Laplace):
 
 ```
-              U
-              
-                s
-              
-            
-            
-              E
-              
-                s
-              
-            
-          
-        
-        =
-        
-          K
-          
-            p
-          
-        
-        (
-        1
-        +
-        
-          
-            1
-            
-              
-                T
-                
-                  i
-                
-              
-              s
-            
-          
-        
-        )
-      
-    
-    {\displaystyle {U_{s} \over E_{s}}=K_{p}(1+{1 \over T_{i}s})}
-  
-![{\displaystyle {U_{s} \over E_{s}}=K_{p}(1+{1 \over T_{i}s})}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2bc33ef8ee73a26e7693a85f82c6c323bdf719fd)
+              Us Es = Kp (1 + 1 Tis)
 ```
 
 ### Erro estacionário do controle proporcional
@@ -315,54 +102,7 @@ O **controle proporcional derivativo** combina o controle proporcional com o con
 [![](./img/ControlePD.png)](/wiki/index.php/Arquivo:ControlePD.png)
 
 ```
-        u
-        (
-        t
-        )
-        =
-        
-          K
-          
-            p
-          
-        
-        e
-        (
-        t
-        )
-        +
-        
-          K
-          
-            p
-          
-        
-        
-          T
-          
-            d
-          
-        
-        
-          
-            
-              d
-              e
-              (
-              t
-              )
-            
-            
-              d
-              t
-            
-          
-        
-      
-    
-    {\displaystyle u(t)=K_{p}e(t)+K_{p}T_{d}{de(t) \over dt}}
-  
-![{\displaystyle u(t)=K_{p}e(t)+K_{p}T_{d}{de(t) \over dt}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/112c8bb4d0baf2df486a0ee9259a1b94f7c9a855)
+        u(t) = Kp e(t) + Kp Td de(t) dt
 ```
 
 onde, Td é o tempo derivativo.
@@ -370,42 +110,7 @@ onde, Td é o tempo derivativo.
 **Função de Transferência** (Transformada de Laplace):
 
 ```
-              U
-              
-                s
-              
-            
-            
-              E
-              
-                s
-              
-            
-          
-        
-        =
-        
-          K
-          
-            p
-          
-        
-        (
-        1
-        +
-        
-          T
-          
-            d
-          
-        
-        s
-        )
-      
-    
-    {\displaystyle {U_{s} \over E_{s}}=K_{p}(1+T_{d}s)}
-  
-![{\displaystyle {U_{s} \over E_{s}}=K_{p}(1+T_{d}s)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/e926c327dfacc7355687e8358407730eca48c340)
+              Us Es = Kp (1 + T ds)
 ```
 
 ### Ação do controle derivativo
@@ -424,86 +129,7 @@ O **controle proporcional integral derivativo** combina as três ações de cont
 [![](./img/ControlePID.png)](/wiki/index.php/Arquivo:ControlePID.png)
 
 ```
-        u
-        (
-        t
-        )
-        =
-        
-          K
-          
-            p
-          
-        
-        e
-        (
-        t
-        )
-        +
-        
-          
-            
-              K
-              
-                p
-              
-            
-            
-              T
-              
-                i
-              
-            
-          
-        
-        
-          ∫
-          
-            0
-          
-          
-            t
-          
-        
-        e
-        (
-        t
-        )
-        d
-        t
-        +
-        
-          K
-          
-            p
-          
-        
-        
-          T
-          
-            d
-          
-        
-        
-          
-            
-              d
-              e
-              (
-              t
-              )
-            
-            
-              d
-              t
-            
-          
-        
-      
-    
-    {\displaystyle u(t)=K_{p}e(t)+{K_{p} \over T_{i}}\int _{0}^{t}e(t)dt+K_{p}T_{d}{de(t) \over dt}}
-  
-![{\displaystyle u(t)=K_{p}e(t)+{K_{p} \over T_{i}}\int _{0}^{t}e(t)dt+K_{p}T_{d}{de(t) \over dt}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/4703d9e10cf41e8d0f67c642ed6be8ba4326d16c)
+        u(t) = Kp e(t) + Kp Ti ∫ 0t e(t) dt + Kp Td de(t) dt
 ```
 
 onde, Ti é o tempo integral e Td é o tempo derivativo.
@@ -511,57 +137,7 @@ onde, Ti é o tempo integral e Td é o tempo derivativo.
 **Função de Transferência** (Transformada de Laplace):
 
 ```
-              U
-              
-                s
-              
-            
-            
-              E
-              
-                s
-              
-            
-          
-        
-        =
-        
-          K
-          
-            p
-          
-        
-        (
-        1
-        +
-        
-          
-            1
-            
-              
-                T
-                
-                  i
-                
-              
-              s
-            
-          
-        
-        +
-        
-          T
-          
-            d
-          
-        
-        s
-        )
-      
-    
-    {\displaystyle {U_{s} \over E_{s}}=K_{p}(1+{1 \over T_{i}s}+T_{d}s)}
-  
-![{\displaystyle {U_{s} \over E_{s}}=K_{p}(1+{1 \over T_{i}s}+T_{d}s)}](https://wikimedia.org/api/rest_v1/media/math/render/svg/400e5306f018eb6323da19e97295341d38c7869e)
+              Us Es = Kp (1 + 1T is + Tds)
 ```
 
 **Gráfico do Controle PID**:
@@ -572,11 +148,3 @@ Referências
 -----------
 
 1. ↑ [1,00](#cite_ref-OGATA_1-0) [1,01](#cite_ref-OGATA_1-1) [1,02](#cite_ref-OGATA_1-2) [1,03](#cite_ref-OGATA_1-3) [1,04](#cite_ref-OGATA_1-4) [1,05](#cite_ref-OGATA_1-5) [1,06](#cite_ref-OGATA_1-6) [1,07](#cite_ref-OGATA_1-7) [1,08](#cite_ref-OGATA_1-8) [1,09](#cite_ref-OGATA_1-9) [1,10](#cite_ref-OGATA_1-10) OGATA, Katsuhiko. Engenharia de Controle Moderno,5a Ed, Pearson, 2011.
-
----
-
---[Evandro.cantu](/wiki/index.php/Usu%C3%A1rio:Evandro.cantu "Usuário:Evandro.cantu") ([discussão](/wiki/index.php?title=Usu%C3%A1rio_Discuss%C3%A3o:Evandro.cantu&action=edit&redlink=1 "Usuário Discussão:Evandro.cantu (página inexistente)")) 19h03min de 4 de maio de 2018 (BRT)
-
----
-
-Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Sistemas_de_Controle&oldid=29640>”
