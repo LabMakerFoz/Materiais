@@ -1,31 +1,5 @@
 # Arduino: Sensores
 
-Índice
-------
-
-* [1 Arduíno: Sensores e Atuadores](#Arduíno:_Sensores_e_Atuadores)
-  + [1.1 Informações sobre Arduíno](#Informações_sobre_Arduíno)
-  + [1.2 Sensor de Luminosidade LDR](#Sensor_de_Luminosidade_LDR)
-    - [1.2.1 Laboratório 1: Sensor de luminosidade LDR](#Laboratório_1:_Sensor_de_luminosidade_LDR)
-  + [1.3 Projeto 1: Sistema indicador de luminosidade](#Projeto_1:_Sistema_indicador_de_luminosidade)
-  + [1.4 Sensor de Temperatura NTC 10k](#Sensor_de_Temperatura_NTC_10k)
-    - [1.4.1 Laboratório 2: Sensor de Temperatura com NTC](#Laboratório_2:_Sensor_de_Temperatura_com_NTC)
-      * [1.4.1.1 Exemplo de código 1](#Exemplo_de_código_1)
-      * [1.4.1.2 Exemplo de código 2](#Exemplo_de_código_2)
-  + [1.5 Sensor de temperatura (LM35)](#Sensor_de_temperatura_(LM35))
-    - [1.5.1 Laboratório 3: Sensor de temperatura LM35](#Laboratório_3:_Sensor_de_temperatura_LM35)
-  + [1.6 Sensor de Temperatura e Umidade DHT11](#Sensor_de_Temperatura_e_Umidade_DHT11)
-    - [1.6.1 Laboratório 4: Sensor de temperatura DHT11](#Laboratório_4:_Sensor_de_temperatura_DHT11)
-  + [1.7 Projeto 2: Sistema de acionamento de equipamento de climatização](#Projeto_2:_Sistema_de_acionamento_de_equipamento_de_climatização)
-  + [1.8 Sensor Ultrassônico](#Sensor_Ultrassônico)
-    - [1.8.1 Sensor Ultrassônico de Distância HC-SR04](#Sensor_Ultrassônico_de_Distância_HC-SR04)
-    - [1.8.2 Sensor Ultrassônico de Distância JSN-SR04T](#Sensor_Ultrassônico_de_Distância_JSN-SR04T)
-    - [1.8.3 Laboratório 5: Sensor Ultrassônico](#Laboratório_5:_Sensor_Ultrassônico)
-  + [1.9 Referências](#Referências)
-
-Arduíno: Sensores e Atuadores
-=============================
-
 O Arduíno pode ler **sensores** e acionar **atuadores** através dos pinos de **entrada/saída**, sejam elas **digitais ou analógicas**.
 
 Informações sobre Arduíno
@@ -103,33 +77,11 @@ RNTC = 10k . (1023/leitura_analógica - 1)
 
 Equação de Steinhart–Hart
 :   A equação de **Steinhart–Hart** (<https://en.wikipedia.org/wiki/Thermistor>), detalha a operação do ***thermistor* NTC** relacionando a variação de **temperatura** (Kelvin) com a **resistência** (Ω).
-:   1
-    T
-    =
-    a
-    +
-    b
+:   
 
-    ln
-    ⁡
-    (
-    R
-    )
-    +
-    c
-
-    (
-    ln
-    ⁡
-    (
-    R
-    )
-
-    )
-
-    3
-    {\displaystyle {1 \over T}=a+b\,\ln(R)+c\,(\ln(R))^{3}}
-    ![{\displaystyle {1 \over T}=a+b\,\ln(R)+c\,(\ln(R))^{3}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/a511eed9413d7b4ad0e7180610774b108d9bc921)
+    1T = a + b
+    ln (R) + c (ln⁡ (R))3
+    
 :   onde a, b e c são parâmetros de Steinhart–Hart específicos para cada dispositivo.
 :   Valores típicos para um thermistor com resistência de 10K Ω na temperatura de (25 °C = 298.15 K) é:
 
@@ -399,11 +351,3 @@ Referências
 6. ↑ [6,0](#cite_ref-filipeflop_6-0) [6,1](#cite_ref-filipeflop_6-1) [6,2](#cite_ref-filipeflop_6-2) [6,3](#cite_ref-filipeflop_6-3) <https://www.filipeflop.com/blog/sensor-ultrassonico-hc-sr04-ao-arduino/>
 7. [↑](#cite_ref-7) <https://www.piscaled.com.br/sensor-de-distancia-ultrasonico-hc-sr04>
 8. [↑](#cite_ref-8) <https://www.piscaled.com.br/sensor-de-distancia-ultrasonico-jsn-sr04t-a-prova-dagua>
-
----
-
-[Evandro.cantu](/wiki/index.php/Usu%C3%A1rio:Evandro.cantu "Usuário:Evandro.cantu") ([discussão](/wiki/index.php?title=Usu%C3%A1rio_Discuss%C3%A3o:Evandro.cantu&action=edit&redlink=1 "Usuário Discussão:Evandro.cantu (página inexistente)")) 09h35min de 17 de setembro de 2021 (-03)
-
----
-
-Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Arduino:_Sensores&oldid=31309>”
