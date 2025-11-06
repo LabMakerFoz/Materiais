@@ -1,17 +1,5 @@
 # Projetos LabMaker
 
-Índice
-------
-
-* [1 Projetos LabMaker](#Projetos_LabMaker)
-  + [1.1 Projetos "guarda-chuva" registrados no COPE](#Projetos_"guarda-chuva"_registrados_no_COPE)
-  + [1.2 Projetos e ações em andamento](#Projetos_e_ações_em_andamento)
-  + [1.3 Equipes de Robótica](#Equipes_de_Robótica)
-  + [1.4 Projetos Realizados no LabMaker](#Projetos_Realizados_no_LabMaker)
-
-Projetos LabMaker
-=================
-
 Projetos "guarda-chuva" registrados no COPE
 -------------------------------------------
 
@@ -116,7 +104,3 @@ Programação Scratch
 
 [Automação residencial com Arduíno](/wiki/index.php/Automa%C3%A7%C3%A3o_residencial_com_Ardu%C3%ADno "Automação residencial com Arduíno")
 :   PBIS 2013. Bolsistas Amir L. K. Annahas e Stephani C. S. da Silva. Professor Humberto Martins Beneduzzi.
-
----
-
-Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Projetos_LabMaker&oldid=27212>”
