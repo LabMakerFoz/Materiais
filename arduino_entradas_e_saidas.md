@@ -1,35 +1,5 @@
 # Arduino: Entradas e Saidas
 
-Índice
-------
-
-* [1 Arduíno: Entradas e Saídas](#Arduíno:_Entradas_e_Saídas)
-  + [1.1 Características do microcontrolador Arduíno](#Características_do_microcontrolador_Arduíno)
-  + [1.2 Saídas digitais](#Saídas_digitais)
-    - [1.2.1 Laboratório 1: Saída digital](#Laboratório_1:_Saída_digital)
-  + [1.3 Leds](#Leds)
-    - [1.3.1 Projeto 1: Semáforo automatizado com leds](#Projeto_1:_Semáforo_automatizado_com_leds)
-  + [1.4 Entradas digitais](#Entradas_digitais)
-  + [1.5 Chave digital](#Chave_digital)
-    - [1.5.1 Laboratório 2: Chave digital](#Laboratório_2:_Chave_digital)
-    - [1.5.2 Projeto 2: Coreografia com leds](#Projeto_2:_Coreografia_com_leds)
-  + [1.6 Entradas Analógicas](#Entradas_Analógicas)
-  + [1.7 Potenciômetros](#Potenciômetros)
-    - [1.7.1 Laboratório 3: Leitura de entrada analógica](#Laboratório_3:_Leitura_de_entrada_analógica)
-    - [1.7.2 Projeto 3: Coluna de leds e potenciômetro](#Projeto_3:_Coluna_de_leds_e_potenciômetro)
-  + [1.8 Saídas Analógicas](#Saídas_Analógicas)
-    - [1.8.1 Laboratório 4: Saída analógica](#Laboratório_4:_Saída_analógica)
-  + [1.9 Monitor Serial](#Monitor_Serial)
-    - [1.9.1 Laboratório 5: Monitor serial](#Laboratório_5:_Monitor_serial)
-  + [1.10 Led RGB](#Led_RGB)
-    - [1.10.1 Leds RGB](#Leds_RGB)
-    - [1.10.2 Laboratório 6: Led RGB](#Laboratório_6:_Led_RGB)
-    - [1.10.3 Projeto 4: Misturando as cores primárias com leds RGB](#Projeto_4:_Misturando_as_cores_primárias_com_leds_RGB)
-  + [1.11 Referências](#Referências)
-
-Arduíno: Entradas e Saídas
-==========================
-
 O Arduíno pode ler **sensores** através de pinos de **entrada digitais e analógicas**, assim como controlar **atuadores** através de **saídas digitais** e **saídas PWM**.
 
 Características do microcontrolador Arduíno
@@ -359,9 +329,6 @@ Referências
 1. [↑](#cite_ref-1) <https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
 
 ---
-
-[Evandro.cantu](/wiki/index.php/Usu%C3%A1rio:Evandro.cantu "Usuário:Evandro.cantu") ([discussão](/wiki/index.php?title=Usu%C3%A1rio_Discuss%C3%A3o:Evandro.cantu&action=edit&redlink=1 "Usuário Discussão:Evandro.cantu (página inexistente)")) 09h41min de 17 de setembro de 2021 (-03)
-
 ---
 
 Disponível em “<http://wiki.foz.ifpr.edu.br/wiki/index.php?title=Arduino:_Entradas_e_Saidas&oldid=31196>”
