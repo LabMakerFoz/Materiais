@@ -1,58 +1,18 @@
 # Ações de Controle PID sobre o Seguidor de Linha
 
-Ações de Controle PID sobre o Seguidor de Linha
-===============================================
-
 Ação de Controle Proporcional
 -----------------------------
 
 A ação de **controle proporcional** do Seguidor de Linha vai corrigir a trajetória do robô, ajustando a velocidades dos motores a partir de um **ganho Kp**, proporcional ao **erro**:
 
 ```
-        C
-        o
-        n
-        t
-        r
-        o
-        l
-        e
-        P
-        =
-        K
-        p
-        ∗
-        e
-        r
-        r
-        o
-      
-    
-    {\displaystyle ControleP=Kp*erro}
-  
-![{\displaystyle ControleP=Kp*erro}](https://wikimedia.org/api/rest_v1/media/math/render/svg/e962e6c332e5f14ba311d5abf068e713e1b497cb)
+        Controle P = Kp ∗ erro
 ```
 
 Caso o robô derive para esquerda, a velocidade dos motores é ajustada para que o robô volte para a linha:
 
-* a **velocidade do motor esquerdo** é **acrescida** do valor **K
-  p
-  ∗
-  e
-  r
-  r
-  o
-  {\displaystyle Kp\*erro}
-  ![{\displaystyle Kp*erro}](https://wikimedia.org/api/rest_v1/media/math/render/svg/6e1c6aa5f32683c95eebc18be10087379f60e00d)**;
-* a **velocidade do motor direito** é **diminuída** do valor **K
-  p
-  ∗
-  e
-  r
-  r
-  o
-  {\displaystyle Kp\*erro}
-  ![{\displaystyle Kp*erro}](https://wikimedia.org/api/rest_v1/media/math/render/svg/6e1c6aa5f32683c95eebc18be10087379f60e00d)**.
+* a **velocidade do motor esquerdo** é **acrescida** do valor **Kp ∗ erro
+* a **velocidade do motor direito** é **diminuída** do valor **Kp ∗ erro
 
 Caso o robô derive para direita, a ação de controle ajusta a velocidade dos motores para corrigir a trajetória para o outro lado.
 
@@ -84,38 +44,7 @@ Caso de uma CURVA
 :   Inicialmente somente o controle proporcional atua, ajustando a trajetória do robô à curva. Entretanto, **a medida que o somatório do erro cresce**, o **controle integral** passa a atuar. A partir de um dado momento, o **controle integral** passa a prevalecer, fazendo o robô **acompanhar a curva** com **erro instantâneo zero**, portanto, sem ação proporcional.
 
 ```
-        C
-        o
-        n
-        t
-        r
-        o
-        l
-        e
-        P
-        I
-        =
-        K
-        p
-        ∗
-        e
-        r
-        r
-        o
-        +
-        K
-        i
-        ∗
-        ∑
-        e
-        r
-        r
-        o
-      
-    
-    {\displaystyle ControlePI=Kp*erro+Ki*\sum erro}
-  
-![{\displaystyle ControlePI=Kp*erro+Ki*\sum erro}](https://wikimedia.org/api/rest_v1/media/math/render/svg/ce303d2fed7cdef6c2f3952a7ba14da6cb2bfb56)
+        Controle PI = Kp ∗ erro + Ki ∗ ∑ erro
 ```
 
 #### Problema I: Verificação da ação do controle integral
@@ -143,39 +72,8 @@ Ação de Controle Proporcional Derivativa
 A ação do **controle derivativo** é proporcional a **taxa de variação do erro** atuante. Vai ter ação, portanto, nos **períodos transitórios** quando o **erro cresce ou diminui**.
 
 ```
-        C
-        o
-        n
-        t
-        r
-        o
-        l
-        e
-        P
-        D
-        =
-        K
-        p
-        ∗
-        e
-        r
-        r
-        o
-        +
-        K
-        d
-        ∗
-        Δ
-        e
-        r
-        r
-        o
-      
-    
-    {\displaystyle ControlePD=Kp*erro+Kd*\Delta erro}
-  
-![{\displaystyle ControlePD=Kp*erro+Kd*\Delta erro}](https://wikimedia.org/api/rest_v1/media/math/render/svg/310041b8879920533d5ea8ec8117c9615df4da6c)
-```
+        Controle PD = Kp ∗ erro + Kd ∗ Δ erro
+ ```
 
 No caso do robô Seguidor de Linha, quando o **erro cresce**, o **controle derivativo** atua **reforçando** a ação do **controle proporcional**.
 
@@ -226,9 +124,5 @@ Referências
 
 1. [↑](#cite_ref-OGATA_1-0) OGATA, Katsuhiko. Engenharia de Controle Moderno, LTC, 2011.
 2. ↑  <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
-
----
-
---[Evandro.cantu](/wiki/index.php/Usu%C3%A1rio:Evandro.cantu "Usuário:Evandro.cantu") ([discussão](/wiki/index.php?title=Usu%C3%A1rio_Discuss%C3%A3o:Evandro.cantu&action=edit&redlink=1 "Usuário Discussão:Evandro.cantu (página inexistente)")) 22h04min de 18 de outubro de 2018 (BRT)
 
 ---
