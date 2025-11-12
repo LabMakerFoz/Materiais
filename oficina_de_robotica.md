@@ -15,7 +15,7 @@ Conteúdo da oficina sobre robótica com Arduíno
 
 ### Aula 1
 
-[Descrição do Arduíno](/wiki/index.php/Arduino "Arduino")
+[Descrição do Arduíno](arduino.md)
 
 [Arduíno: Saídas digitais e leds](/wiki/index.php/Arduino:_Entradas_e_Saidas#Sa.C3.ADdas_digitais "Arduino: Entradas e Saidas")
 
