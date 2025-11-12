@@ -7,9 +7,9 @@
 ---
 
 ###  Créditos  
-Olá! Eu sou **Guilherme C. Wernke
+Olá! Eu sou **Guilherme C. Wernke**, criador deste GitHub, espero que esteja gostando!
 <br>
-[@guilherm.cw](https://instagram.com/guilherm.cw)**
+[@guilherm.cw](https://instagram.com/guilherm.cw)
 
 <table>
   <tr>
@@ -35,4 +35,3 @@ Feito por GCW para o LabMaker
 
 </div>
 </div>
-
