@@ -10,8 +10,9 @@
 
 ---
 
-### 👤 Créditos  
+###  Créditos  
 Olá! Eu sou **Guilherme C. Wernke
+<br>
 [@guilherm.cw](https://instagram.com/guilherm.cw)**
 
 <table>
