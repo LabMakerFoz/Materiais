@@ -109,11 +109,11 @@ A primeira versão do **Seguidor de Linha** utilizava um **vetor com sete sensor
 
 Dependendo da posição do vetor sobre a linha, **apenas um** ou **dois sensores** podem reconhecer a linha ao mesmo tempo, como mostra as figuras abaixo [[1]](#cite_note-LabGaragem-1):
 
-[![](./img/300px-VetorSensores1.png)](/wiki/index.php/Arquivo:VetorSensores1.png)
+[![](./img/300px-VetorSensores1.png)]
 
 :   Apenas sensor central (s3) reconhece a linha.
 
-[![](./img/300px-VetorSensores2.png)](/wiki/index.php/Arquivo:VetorSensores2.png)
+[![](./img/300px-VetorSensores2.png)]
 
 :   Sensor central (s3) e sensor (s4) reconhecem a linha.
 
