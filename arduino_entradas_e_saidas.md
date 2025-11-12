@@ -228,7 +228,7 @@ Saídas Analógicas
 
 O Arduíno emula **saídas analógicas** através de **modulação PWM** (*Pulse Width Modulation*).
 
-O **sinal PWM** é uma **onda quadrada**, com frequência constante, mas a fração de tempo em que o sinal é HIGH (5V) (*duty cycle*) pode variar entre 0 e 100%, fornecendo uma média de tensão variável na saída [[1]](#cite_note-1).
+O **sinal PWM** é uma **onda quadrada**, com frequência constante, mas a fração de tempo em que o sinal é HIGH (5V) (*duty cycle*) pode variar entre 0 e 100%, fornecendo uma média de tensão variável na saída.
 ![](./img/PWM.gif)]
 
 As **6 Saídas PWM** são identificadas pelo sinal **~** e fornecem **saídas analógicas** através de **pulsos PWM** de **8 bits**, possibilitando, portanto, **256 valores** diferentes de **tensão analógica** entre **0V e 5V**, com passos de **0 a 255**.
