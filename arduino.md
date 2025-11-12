@@ -8,24 +8,23 @@ Links e referências
 * [Site oficial do Arduíno](http://www.arduino.cc/)
   + [Referência da Linguagem](https://www.arduino.cc/reference/pt/)
   + [Exemplos prontos](https://www.arduino.cc/en/Tutorial/BuiltInExamples)
-  + [Exemplos usando Bibliotecas](https://www.arduino.cc/en/Tutorial/LibraryExamples)
 
 Algumas placas Arduino
 ----------------------
 
 Arduino UNO
 
-[![](./img/300px-PinosArduinoUno.png)](/wiki/index.php/Arquivo:PinosArduinoUno.png)
+[![](./img/300px-PinosArduinoUno.png)]
 
 Arduino Micro
 
-[![](./img/375px-PinosArduinoMicro.png)](/wiki/index.php/Arquivo:PinosArduinoMicro.png)
+[![](./img/375px-PinosArduinoMicro.png)]
 
 Arduino Mega
 
-[![](./img/500px-PinosArduinoMega.png)](/wiki/index.php/Arquivo:PinosArduinoMega.png)
+[![](./img/500px-PinosArduinoMega.png)]
 
-Hardware do Arduíno UNO [[1]](#cite_note-1)
+Hardware do Arduíno UNO
 -------------------------------------------
 
 * Microcontrolador ATmega328P
@@ -66,9 +65,9 @@ Pinos de voltagem
 
 6 Saídas PWM
 :   Identificadas pelo sinal **~**. Fornecem **saídas analógicas** através de **pulsos PWM** (*Pulse Width Modulation*) de **8 bits** (valores de **0** a **255**).
-:   O sinal PWM é uma onda quadrada, com frequência constante, mas a fração de tempo em que o sinal é HIGH (5V) (*duty cycle*) pode variar entre 0 e 100%, fornecedo uma média de tensão variável na saída [[2]](#cite_note-2).
+:   O sinal PWM é uma onda quadrada, com frequência constante, mas a fração de tempo em que o sinal é HIGH (5V) (*duty cycle*) pode variar entre 0 e 100%, fornecedo uma média de tensão variável na saída
 
-[![](./img/PWM.gif)](/wiki/index.php/Arquivo:PWM.gif)
+[![](./img/PWM.gif)]
 
 Led pino 13
 :   O pino 13 tem um **led montado na placa**. Quando o pino for HIGH o led acende, quando for LOW o led apaga.
@@ -97,7 +96,7 @@ Os programas fonte são identificados pela extensão **.ino**.
 
 A própria IDE do Arduíno apresenta vários exemplos de aplicações e programas que ajudam quem está iniciando a programá-lo.
 
-[![](./img/400px-ArduinoIDE.png)](/wiki/index.php/Arquivo:ArduinoIDE.png)
+[![](./img/400px-ArduinoIDE.png)]
 
 SimulIDE: Ambiente de simulação para Arduíno
 --------------------------------------------
