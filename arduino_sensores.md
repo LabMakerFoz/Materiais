@@ -124,8 +124,7 @@ void loop()
 
 Observações:
 
-* A função `log()`, utilizado no código exemplo, faz parte da biblioteca `math.h`[[1]](#cite_note-1) e é o logaritmo natural (ln). A função para o logaritmo base 10 seria `log10`.
-* Código adaptado de [[2]](#cite_note-2).
+* A função `log()`, utilizado no código exemplo, faz parte da biblioteca `math.h` e é o logaritmo natural (ln). A função para o logaritmo base 10 seria `log10`.
 
 #### Exemplo de código 2
 
@@ -275,7 +274,7 @@ O **sensor ultrassônico** é um **sensor digital** que se baseia no envio de **
 
 O acionamento do **sensor ultrassônico** é realizado enviando ao pino ***trigger*** um pulso com 10μs (1), o qual faz o sensor disparar um sinal com 8 pulsos de 40 KHz (2) e aguardar o retorno do ***echo*** do sinal em nível alto (3).
 
-![](./img/300px-SensorUltrasonico_Trigger_Echo2.png)(/wiki/index.php/Arquivo:SensorUltrasonico_Trigger_Echo2.png)[[6]](#cite_note-filipeflop-6)
+![](./img/300px-SensorUltrasonico_Trigger_Echo2.png)(/wiki/index.php/Arquivo:SensorUltrasonico_Trigger_Echo2.png)
 
 A **distância** entre o sensor e o objeto pode ser determinada pela equação:
 
@@ -330,16 +329,14 @@ void loop() {
 }
 ```
 
-Outra opção é utilizar a **biblioteca** **Ultrasonic.h**, como mostrado em [[6]](#cite_note-filipeflop-6).
-
 Referências
 -----------
 
-1. [↑](#cite_ref-1) <https://www.arduino.cc/en/math/h>
-2. [↑](#cite_ref-2) <http://playground.arduino.cc/ComponentLib/Thermistor2>
-3. [↑](#cite_ref-3) <https://github.com/panStamp/thermistor/blob/master/examples/basicntc/basicntc.ino>
-4. [↑](#cite_ref-4)  <http://www.ti.com/lit/ds/symlink/lm35.pdf>
-5. [↑](#cite_ref-5) <https://github.com/adafruit/DHT-sensor-library>
-6. ↑ [6,0](#cite_ref-filipeflop_6-0) [6,1](#cite_ref-filipeflop_6-1) [6,2](#cite_ref-filipeflop_6-2) [6,3](#cite_ref-filipeflop_6-3) <https://www.filipeflop.com/blog/sensor-ultrassonico-hc-sr04-ao-arduino/>
-7. [↑](#cite_ref-7) <https://www.piscaled.com.br/sensor-de-distancia-ultrasonico-hc-sr04>
-8. [↑](#cite_ref-8) <https://www.piscaled.com.br/sensor-de-distancia-ultrasonico-jsn-sr04t-a-prova-dagua>
+1. <https://www.arduino.cc/en/math/h>
+2. <http://playground.arduino.cc/ComponentLib/Thermistor2>
+3. <https://github.com/panStamp/thermistor/blob/master/examples/basicntc/basicntc.ino>
+4. <http://www.ti.com/lit/ds/symlink/lm35.pdf>
+5. <https://github.com/adafruit/DHT-sensor-library>
+6. <https://www.filipeflop.com/blog/sensor-ultrassonico-hc-sr04-ao-arduino/>
+7. <https://www.piscaled.com.br/sensor-de-distancia-ultrasonico-hc-sr04>
+8. <https://www.piscaled.com.br/sensor-de-distancia-ultrasonico-jsn-sr04t-a-prova-dagua>
