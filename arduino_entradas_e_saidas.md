@@ -184,7 +184,7 @@ Entradas Analógicas
 -------------------
 
 O Arduíno UNO possui 6 entradas analógicas
-:   As **entradas analógicas** utilizam um processo de **[Conversão Analógico Digital](/wiki/index.php/Conversao_Analogico_Digital "Conversao Analogico Digital") (ADC)** para obter valores digitais correspondentes a cada entrada.
+:   As **entradas analógicas** utilizam um processo de **Conversão Analógico Digital (ADC)** para obter valores digitais correspondentes a cada entrada.
 
 * As **entradas analógicas** são nomeadas de **A0** até **A5**.
 * Cada entrada analógica recebe **valores analógicos** entre **0 V** e **5 V**.
