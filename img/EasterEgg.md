@@ -31,7 +31,7 @@ Este projeto representa esforço, aprendizado e criatividade, e espero que as fu
 ---
 
 <p align="center">
-🕓 Criado em: <strong>12 de novembro de 2025</strong><br>
+Criado em: <strong>12 de novembro de 2025</strong><br>
 Feito por GCW para o LabMaker
 </p>
 
