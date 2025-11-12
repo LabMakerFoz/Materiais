@@ -132,13 +132,11 @@ void loop()
 
 ### Módulo Ponte H TB6612FNG
 
-Este módulo é provavelmente a melhor opção para seguidores de linha, oferecendo plataforma pronta para **prototipagem** para controlar até dois motores de corrente contínua e pode ser comandado por microcontroladores como o Arduíno.
+Este módulo é provavelmente a melhor opção para seguidores de linha[?](./img/EasterEgg.md) oferecendo plataforma pronta para **prototipagem** para controlar até dois motores de corrente contínua e pode ser comandado por microcontroladores como o Arduíno.
 
 ![](./img/768px-TB6612FNG_pinout.png)
 
 A referência [DroneBotWorkshop Driver TB6612FNG](https://dronebotworkshop.com/tb6612fng-h-bridge/) apresenta uma descrição detalhada deste módulo e a forma de utilização com o **Arduíno**, além de códigos e exemplos de uso. Vale a Pena Ver!
-
-[?](./img/EasterEgg.md)
 
 Sensor de Linha Infra Vermelho
 ------------------------------
