@@ -5,13 +5,13 @@ O Arduíno pode ler **sensores** através de pinos de **entrada digitais e anal�
 Características do microcontrolador Arduíno
 -------------------------------------------
 
-[Arduino](/wiki/index.php/Arduino "Arduino")
+[Arduino](arduino.md)
 
 [Site oficial do Arduíno](https://www.arduino.cc/)
 
 Arduino UNO
 
-[![](./img/300px-PinosArduinoUno.png)](/wiki/index.php/Arquivo:PinosArduinoUno.png)
+![](./img/300px-PinosArduinoUno.png)
 
 Saídas digitais
 ---------------
@@ -49,11 +49,11 @@ digitalWrite
 Leds
 ----
 
-[![](./img/600px-Arduino_Blink.png)](/wiki/index.php/Arquivo:Arduino_Blink.png)
+![](./img/600px-Arduino_Blink.png)]
 
-Um **led** é um **diodo emissor de luz** (*light emitting diode*). Ele se comporta como um [**Diodo**](/wiki/index.php/Diodos "Diodos"), conduzindo apenas quanto polarizado diretamente.
+Um **led** é um **diodo emissor de luz** (*light emitting diode*). Ele se comporta como um **Diodo**, conduzindo apenas quanto polarizado diretamente.
 
-[![](./img/200px-Led.jpeg)](/wiki/index.php/Arquivo:Led.jpeg)
+![](./img/200px-Led.jpeg)]
 
 Um **led** não pode receber tensão diretamente em seus terminais sob risco de colocar o componente em **curto-circuito**. A **corrente elétrica** no led deve ser limitada, tipicamente entre **10 mA** a **30 mA** por um **resistor** externo.
 
@@ -66,7 +66,7 @@ Exemplo cálculo do resistor de proteção de um circuito com led
 Iled = 10 mA
 ```
 
-[![](./img/150px-CircuitoLed.png)](/wiki/index.php/Arquivo:CircuitoLed.png)
+![](./img/150px-CircuitoLed.png)
 
 Soma das tensões ao longo da malha (2a Lei de Kirchhoff):
 
@@ -98,7 +98,7 @@ R = (5 - 2)/(10/1000) = 3/(1/100) = 3 . 100 = 300Ω
 270Ω ou 330Ω
 ```
 
-[Código de cores de resistores](/wiki/index.php/Resistores "Resistores")
+[Código de cores de resistores]
 
 ### Projeto 1: Semáforo automatizado com leds
 
@@ -107,7 +107,7 @@ Semáforo
 * Montar hardware para acionamento de **3 leds** (vermelho, verde e amarelo), comandados por 3 saídas digitais independentes do Arduíno, utilizando **resistores** de proteção adequados.
 * Modificar programa **[Arquivo/Exemplos/Basic/Blink](https://www.arduino.cc/en/Tutorial/Blink)** para acionar os leds como um **semáforo**, com **temporização** adequada para cada cor.
 
-[![](./img/600px-Arduino_Semaforo.png)](/wiki/index.php/Arquivo:Arduino_Semaforo.png)
+![](./img/600px-Arduino_Semaforo.png)
 
 Entradas digitais
 -----------------
@@ -133,7 +133,7 @@ Chave digital
 
 Uma **chave digital** fornecerá **0 V** (**LOW**) ou **5 V** (**HIGH**) caso estiver aberta ou fechada.
 
-[![](./img/ChaveDigital.png)](/wiki/index.php/Arquivo:ChaveDigital.png)
+![](./img/ChaveDigital.png)]
 
 Funcionamento:
 
@@ -168,7 +168,7 @@ I = 5/10 . (1/103) = 0,5 . 10-3 = 0,5 mA
 
 ### Laboratório 2: Chave digital
 
-[![](./img/600px-Arduino_Botao.png)](/wiki/index.php/Arquivo:Arduino_Botao.png)
+![](./img/600px-Arduino_Botao.png)
 
 digitalRead
 
@@ -205,11 +205,11 @@ São **resistências variáveis** através de um cursor.
 
 :   Na figura, através de um **potenciômetro** é possível implementar um **divisor de tensão** com uma tensão variável Vx obtida a partir do terminal central do potenciômetro.
 
-[![](./img/Potenciometro.png)](/wiki/index.php/Arquivo:Potenciometro.png) [![](./img/150px-Potenciometro.jpg)](/wiki/index.php/Arquivo:Potenciometro.jpg)
+![](./img/Potenciometro.png)](/wiki/index.php/Arquivo:Potenciometro.png) ![](./img/150px-Potenciometro.jpg)]
 
 ### Laboratório 3: Leitura de entrada analógica
 
-[![](./img/600px-Arduino_Potenciometro.png)](/wiki/index.php/Arquivo:Arduino_Potenciometro.png)
+![](./img/600px-Arduino_Potenciometro.png)]
 
 analogRead
 
@@ -229,7 +229,7 @@ Saídas Analógicas
 O Arduíno emula **saídas analógicas** através de **modulação PWM** (*Pulse Width Modulation*).
 
 O **sinal PWM** é uma **onda quadrada**, com frequência constante, mas a fração de tempo em que o sinal é HIGH (5V) (*duty cycle*) pode variar entre 0 e 100%, fornecendo uma média de tensão variável na saída [[1]](#cite_note-1).
-[![](./img/PWM.gif)](/wiki/index.php/Arquivo:PWM.gif)
+![](./img/PWM.gif)]
 
 As **6 Saídas PWM** são identificadas pelo sinal **~** e fornecem **saídas analógicas** através de **pulsos PWM** de **8 bits**, possibilitando, portanto, **256 valores** diferentes de **tensão analógica** entre **0V e 5V**, com passos de **0 a 255**.
 
@@ -282,7 +282,7 @@ Um **led RGB** apresenta em um único led a possibilidade de fornecer todas as c
 * A **cor preta** é a ausência de cores.
 * As **demais cores** requerem **mistura** das três cores primárias em quantidades específicas.
 
-[![](./img/300px-CoresPrimarias.jpg)](/wiki/index.php/Arquivo:CoresPrimarias.jpg)
+![](./img/300px-CoresPrimarias.jpg)](/wiki/index.php/Arquivo:CoresPrimarias.jpg)
 
 COLOR PICKER
 :   A ferramenta **[color picker](http://htmlcolorcodes.com/color-picker/)** é utilizada para obter as **misturas das cores primárias** utilizada na **Linguagem HTML** com uma paleta de **256 cores RBG**.
@@ -296,8 +296,8 @@ Os **leds RGB** são encontrados em duas estruturas:
 * Anodo comum;
 * Catodo comum.
 
-[![](./img/250px-LedRGB.jpeg)](/wiki/index.php/Arquivo:LedRGB.jpeg)
-[![](./img/LedRGB.png)](/wiki/index.php/Arquivo:LedRGB.png)
+![](./img/250px-LedRGB.jpeg)]
+![](./img/LedRGB.png)]
 
 ### Laboratório 6: Led RGB
 
@@ -326,4 +326,4 @@ Misturando as cores primárias
 Referências
 -----------
 
-1. [↑](#cite_ref-1) <https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
+1. <https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM>
