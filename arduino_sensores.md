@@ -5,7 +5,7 @@ O Arduíno pode ler **sensores** e acionar **atuadores** através dos pinos de *
 Informações sobre Arduíno
 -------------------------
 
-[Arduino](/wiki/index.php/Arduino "Arduino")
+[Arduino](arduino.md)
 
 [Arduíno: Entradas e Saídas](/wiki/index.php/Arduino:_Entradas_e_Saidas "Arduino: Entradas e Saidas")
 
@@ -16,14 +16,13 @@ Sensor de Luminosidade LDR
 
 O **Sensor de luminosidade (LDR)** (*Light Dependent Resistor*) é um **sensor analógico** formado por um **resistor dependente de luz** ou **fotoresistor**, o qual varia sua resistência em função da luminosidade.
 
-[![](./img/100px-LDR.jpeg)](/wiki/index.php/Arquivo:LDR.jpeg)
+![](./img/100px-LDR.jpeg)
 
-Os sensores baseados em **resistência variável** utilizam a estrutura **[divisor de tensão](/wiki/index.php/Divisor_de_Tensao "Divisor de Tensao")** para obter uma tensão variável que pode ser lida por uma entrada analógica do Arduíno.
+Os sensores baseados em **resistência variável** utilizam a estrutura **divisor de tensão** para obter uma tensão variável que pode ser lida por uma entrada analógica do Arduíno.
 
 ### Laboratório 1: Sensor de luminosidade LDR
 
-[![](./img/DivisorTensao-LDR.png)](/wiki/index.php/Arquivo:DivisorTensao-LDR.png)
-
+![](./img/DivisorTensao-LDR.png)
 * Montar hardware com o **sensor LDR**, conforme mostrado na figura acima.
 * Testar o código exemplo **[Arquivo/Exemplos/Analog/AnalogInput](http://www.arduino.cc/en/Tutorial/AnalogInput)**, e verificar o valor da **frequência** do pulsar do **led** em função do valor da **luminosidade**.
 * Carregar programa exemplo **[Arquivo/Exemplos/Basic/AnalogReadSerial](https://www.arduino.cc/en/Tutorial/AnalogReadSerial)** e verificar o valor da **entrada analógica** gerada pelo **LDR** no **monitor serial**.
@@ -43,17 +42,17 @@ Sensor de Temperatura NTC 10k
 
 O **sensor de temperatura NTC 10k** é um **sensor analógico** formado por um **thermistor**, isto é, um resistor cuja resistência varia com a temperatura, podendo medir de −90 °C a 130 °C.
 
-[![](./img/200px-NTC_10k.jpg)](/wiki/index.php/Arquivo:NTC_10k.jpg)
+![](./img/200px-NTC_10k.jpg)]
 
 Existem dois tipos de thermistores:
 
 * NTC (Negative Temperature Coefficient), no qual a resistência diminui com o aumento da temperatura;
 * PTC (Positive Temperature Coefficient), no qual a resistência aumenta com o aumento da temperatura.
 
-Para leitura com o Arduíno, o sensor **NTC 10k** é utilizado numa estrutura com um  **[divisor de tensão](/wiki/index.php/Divisor_de_Tensao "Divisor de Tensao")** com um resistor de 10K Ω.
+Para leitura com o Arduíno, o sensor **NTC 10k** é utilizado numa estrutura com um  **divisor de tensão** com um resistor de 10K Ω.
 
 Esquema de ligação com Arduíno:
-[![](./img/DivisorTensao-NTC10k.png)](/wiki/index.php/Arquivo:DivisorTensao-NTC10k.png)
+![](./img/DivisorTensao-NTC10k.png)
 
 Cálculo da resistência do NTC
 :   Na temperatura de 25 °C a resistência do NTC é 10 k Ω, variando linearmente com a temperatura.
@@ -152,17 +151,12 @@ void loop()
 }
 ```
 
-Observações:
-
-* Baseado no exemplo apresentado em[[3]](#cite_note-3).
-
 Sensor de temperatura (LM35)
 ----------------------------
 
 Funcionamento do sensor LM35
 :   O **sensor de temperatura LM35** é um **circuito integrado** exclusivo para medir temperatura com uma tensão de saída analógica variando linearmente com a temperatura em graus Célsius.
 :   Na configuração básica este sensor mede temperaturas entre 2oC e 150oC, variando a saída em função da temperatura de 0 mV + 10mV por 1oC.
-:   Com a configuração mostrada em [[4]](#cite_note-4) é possível medir temperatura de -55oC e 150oC.
 
 Esquema de ligação com Arduíno
 
@@ -210,8 +204,6 @@ Sensor de Temperatura e Umidade DHT11
 -------------------------------------
 
 O **sensor de temperatura e umidade DHT11** é um **sensor digital** que inclui internamente um medidor de umidade resistivo e um sensor de temperatura tipo NTC conectado a um microcontrolador de 8 bits.
-
-O DHT11 possui uma **biblioteca** com funções prontas para seu funcionamento ([DHT11.zip](/wiki/images/8/8d/DHT11.zip "DHT11.zip")). Há versões atualizadas desta biblioteca disponíveis em [[5]](#cite_note-5).
 
 Esquema de ligação com Arduíno
 
@@ -277,13 +269,13 @@ LDR
 Sensor Ultrassônico
 -------------------
 
-O **sensor ultrassônico** é um **sensor digital** que se baseia no envio de **sinais ultrassônicos** pelo sensor, que aguarda o retorno do sinal (**echo**), e com base no **tempo entre envio e retorno**, calcula a **distância** entre o sensor e o objeto detectado [[6]](#cite_note-filipeflop-6).
+O **sensor ultrassônico** é um **sensor digital** que se baseia no envio de **sinais ultrassônicos** pelo sensor, que aguarda o retorno do sinal (**echo**), e com base no **tempo entre envio e retorno**, calcula a **distância** entre o sensor e o objeto detectado.
 
-[![](./img/300px-SensorUltrasonico_Trigger_Echo.jpg)](/wiki/index.php/Arquivo:SensorUltrasonico_Trigger_Echo.jpg)[[6]](#cite_note-filipeflop-6)
+![](./img/300px-SensorUltrasonico_Trigger_Echo.jpg)]
 
 O acionamento do **sensor ultrassônico** é realizado enviando ao pino ***trigger*** um pulso com 10μs (1), o qual faz o sensor disparar um sinal com 8 pulsos de 40 KHz (2) e aguardar o retorno do ***echo*** do sinal em nível alto (3).
 
-[![](./img/300px-SensorUltrasonico_Trigger_Echo2.png)](/wiki/index.php/Arquivo:SensorUltrasonico_Trigger_Echo2.png)[[6]](#cite_note-filipeflop-6)
+![](./img/300px-SensorUltrasonico_Trigger_Echo2.png)(/wiki/index.php/Arquivo:SensorUltrasonico_Trigger_Echo2.png)[[6]](#cite_note-filipeflop-6)
 
 A **distância** entre o sensor e o objeto pode ser determinada pela equação:
 
@@ -293,11 +285,11 @@ distância = tempo do echo em nível alto * velocidade do som / 2
 
 ### Sensor Ultrassônico de Distância HC-SR04
 
-O sensor ultrasônico HC-SR04[[7]](#cite_note-7) funciona como um detector de objetos e permite medir distâncias mínimas de 2 centímetros podendo chegar a distancias máximas de até 450 centímetros, com uma precisão de 3 milímetros. Funcionamento: Necessita de um gatilho (trigger) de pelo menos 10us de nivel alto. O módulo envia automaticamente 8 pulsos de 40kHz e automaticamente detecta se houve retorno de algum pulso. Se houver um sinal de retorno a partir dos disparos, o nivel de saída é modificado.
+O sensor ultrasônico HC-SR04 funciona como um detector de objetos e permite medir distâncias mínimas de 2 centímetros podendo chegar a distancias máximas de até 450 centímetros, com uma precisão de 3 milímetros. Funcionamento: Necessita de um gatilho (trigger) de pelo menos 10us de nivel alto. O módulo envia automaticamente 8 pulsos de 40kHz e automaticamente detecta se houve retorno de algum pulso. Se houver um sinal de retorno a partir dos disparos, o nivel de saída é modificado.
 
 ### Sensor Ultrassônico de Distância JSN-SR04T
 
-O Sensor Ultrassônico de Distância JSN-SR04T[[8]](#cite_note-8) foi desenvolvido para aperfeiçoar projetos de robótica e microeletrônica, mostrando-se ideal para calcular a distância com precisão de objetos entre ~25cm à ~1,5 metros.
+O Sensor Ultrassônico de Distância JSN-SR04T foi desenvolvido para aperfeiçoar projetos de robótica e microeletrônica, mostrando-se ideal para calcular a distância com precisão de objetos entre ~25cm à ~1,5 metros.
 
 O principal diferencial do Sensor Ultrassônico JSN-SR04T é sua ampla e eficiente resistência à umidade, sendo principalmente utilizado em ambientes úmidos, permitindo manter ampla distância do microcontrolador já que possui fio com 2,5 metros de comprimento, no entanto lembramos que o sensor não pode ser submerso na água.
 
