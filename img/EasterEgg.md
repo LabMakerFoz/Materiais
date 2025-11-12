@@ -4,8 +4,8 @@
 
 <div class="easter-content">
 
-# 🎉 Parabéns!
-*Você encontrou um easter egg 🥚✨
+**🎉 Parabéns!**
+## Você encontrou um easter egg 🥚✨
 
 ---
 
