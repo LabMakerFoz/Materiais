@@ -24,7 +24,7 @@ Nesta oficina são desenvolvidos os conhecimentos básicos sobre o **[Arduíno](
 ### Materiais sobre robótica com Arduíno
 
 Sensores
-Sem Conteudo (temporário)
+* Sem Conteudo (temporário)
 
 Baterias
 * [Como recuperar baterias baixas](https://www.youtube.com/watch?v=_fT_W3AwIT8)
