@@ -66,7 +66,7 @@ Obs:
 
 Este módulo utiliza o circuito integrado L298N, oferecendo plataforma pronta para **prototipagem** para controlar até dois motores de corrente contínua ou um motor de passo e pode ser comandado por microcontroladores como o Arduíno.
 
-[![](./img/250px-PonteH_L298N.jpg)](/wiki/index.php/Arquivo:PonteH_L298N.jpg) [[1]](#cite_note-FelipeFlop-1)
+[![](./img/250px-PonteH_L298N.jpg)](/wiki/index.php/Arquivo:PonteH_L298N.jpg)
 
 A referência [FelipeFlop. Motor DC com Driver Ponte H L298N](https://www.filipeflop.com/blog/motor-dc-arduino-ponte-h-l298n/) apresenta uma descrição detalhada deste módulo e a forma de utilização com o **Arduíno**.
 
@@ -129,6 +129,14 @@ void loop()
   delay(1000);
 }
 ```
+
+### Módulo Ponte H TB6612FNG
+
+Este módulo é provavelmente a melhor opção para seguidores de linha, oferecendo plataforma pronta para **prototipagem** para controlar até dois motores de corrente contínua e pode ser comandado por microcontroladores como o Arduíno.
+
+ADD imagem
+
+A referência [DroneBotWorkshop Driver TB6612FNG]([https://www.filipeflop.com/blog/motor-dc-arduino-ponte-h-l298n/](https://dronebotworkshop.com/tb6612fng-h-bridge/)) apresenta uma descrição detalhada deste módulo e a forma de utilização com o **Arduíno**, além de códigos e exemplos de uso. Vale a Pena Ver!
 
 Sensor de Linha Infra Vermelho
 ------------------------------
