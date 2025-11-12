@@ -5,28 +5,28 @@ Referência principal
 
 Um **sistema de controle em malha fechada** procura manter a saída do sistema alinhada com uma **referência**. Para tal, monitora uma variável do sistema com um **sensor** e compara com a referência. O **erro** resultante é utilizado para ajustar a **ação de controle** ([[1]](#cite_note-OGATA-1), p. 7).
 
-[![](./img/SistemasControle.png)](/wiki/index.php/Arquivo:SistemasControle.png)
+![](./img/SistemasControle.png)(/wiki/index.php/Arquivo:SistemasControle.png)
 
 Controle On / Off
 -----------------
 
 O **controle on/off** procura ajustar a saída do sistema com a referência ligando e desligando a ação de controle. Por exemplo, para manter uma dada temperatura em um forno, liga ou desliga a resistência de aquecimento, caso a temperatura fique abaixo ou acima do ponto de referência, respectivamente ([[1]](#cite_note-OGATA-1), p. 19-20).
 
-[![](./img/ControleOnOff.png)](/wiki/index.php/Arquivo:ControleOnOff.png)
+![](./img/ControleOnOff.png)(/wiki/index.php/Arquivo:ControleOnOff.png)
 
 É interessante a ação de **controle on/off** ter um **intervalo diferencial** na referência para evitar comutações excessivas.
 
 Gráfico da saída com controle On/Off
 :   A saída de um sistema com controle On/Off oscila entre dois pontos, ligeiramente acima e abaixo da referência.
 
-[![](./img/GradicoOnOff.png)](/wiki/index.php/Arquivo:GradicoOnOff.png)
+![](./img/GradicoOnOff.png)(/wiki/index.php/Arquivo:GradicoOnOff.png)
 
 Controle Proporcional
 ---------------------
 
 O **controle proporcional** ajusta a ação de controle de forma **proporcional ao erro** gerado ([[1]](#cite_note-OGATA-1), p. 21).
 
-[![](./img/ControleProporcional.png)](/wiki/index.php/Arquivo:ControleProporcional.png)
+![](./img/ControleProporcional.png)(/wiki/index.php/Arquivo:ControleProporcional.png)
 
 ```
         u(t) = Kp  e(t)
@@ -45,7 +45,7 @@ Controle Integral
 
 O **controle integral** ajusta a ação de controle em função ao **somatório do erro** em um dado intervalo de tempo ([[1]](#cite_note-OGATA-1), p. 21).
 
-[![](./img/ControleIntegral.png)](/wiki/index.php/Arquivo:ControleIntegral.png)
+![](./img/ControleIntegral.png)(/wiki/index.php/Arquivo:ControleIntegral.png)
 
 ```
         u(t) = Ki ∫ 0t e(t)dt
@@ -65,14 +65,14 @@ Quando o erro fica nulo a ação de controle permanece num estado estacionário,
 
 **Gráfico do Controle Integral**:
 
-[![](./img/GraficoControleIntegral.png)](/wiki/index.php/Arquivo:GraficoControleIntegral.png)
+![](./img/GraficoControleIntegral.png)(/wiki/index.php/Arquivo:GraficoControleIntegral.png)
 
 Controle Proporcional Integral
 ------------------------------
 
 O controle proporcional integral combina a ação de controle proporcional e integral ([[1]](#cite_note-OGATA-1), p. 21).
 
-[![](./img/ControlePI.png)](/wiki/index.php/Arquivo:ControlePI.png)
+![](./img/ControlePI.png)(/wiki/index.php/Arquivo:ControlePI.png)
 
 ```
         u(t)  Kp e(t) + Kp Ti ∫ 0t e(t) dt
@@ -92,14 +92,14 @@ Sem o **controle integral** há um **erro estacionário** (também chamado **err
 
 **Gráfico do Controle PI**:
 
-[![](./img/GraficoPI.png)](/wiki/index.php/Arquivo:GraficoPI.png)
+![](./img/GraficoPI.png)(/wiki/index.php/Arquivo:GraficoPI.png)
 
 Controle Proporcional Derivativo
 --------------------------------
 
 O **controle proporcional derivativo** combina o controle proporcional com o controle derivativo. O **controle derivativo** procura ajustar a ação de controle em função da taxa de variação do erro ([[1]](#cite_note-OGATA-1), p. 21).
 
-[![](./img/ControlePD.png)](/wiki/index.php/Arquivo:ControlePD.png)
+![](./img/ControlePD.png)(/wiki/index.php/Arquivo:ControlePD.png)
 
 ```
         u(t) = Kp e(t) + Kp Td de(t) dt
@@ -119,14 +119,14 @@ A ação do **controle derivativo** é proporcional a **taxa de variação do er
 
 **Gráfico do Controle PD**:
 
-[![](./img/GraficoPD2.png)](/wiki/index.php/Arquivo:GraficoPD2.png)
+![](./img/GraficoPD2.png)(/wiki/index.php/Arquivo:GraficoPD2.png)
 
 Controle Proporcional Integral Derivativo
 -----------------------------------------
 
 O **controle proporcional integral derivativo** combina as três ações de controle, visando atingir rapidamente a referência, minimizando os transitórios e eliminando o possível erro residual ([[1]](#cite_note-OGATA-1), p. 21).
 
-[![](./img/ControlePID.png)](/wiki/index.php/Arquivo:ControlePID.png)
+![](./img/ControlePID.png)(/wiki/index.php/Arquivo:ControlePID.png)
 
 ```
         u(t) = Kp e(t) + Kp Ti ∫ 0t e(t) dt + Kp Td de(t) dt
@@ -142,7 +142,7 @@ onde, Ti é o tempo integral e Td é o tempo derivativo.
 
 **Gráfico do Controle PID**:
 
-[![](./img/GraficoPID2.png)](/wiki/index.php/Arquivo:GraficoPID2.png)
+![](./img/GraficoPID2.png)(/wiki/index.php/Arquivo:GraficoPID2.png)
 
 Referências
 -----------
