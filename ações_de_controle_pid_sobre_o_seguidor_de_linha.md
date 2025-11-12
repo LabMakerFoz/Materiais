@@ -37,7 +37,7 @@ Caso de uma RETA
 3. O robô **deriva sistematicamente para um lado** devido a possíveis **desequilíbrios de velocidades dos motores**, levando com o passar do tempo a um **somatório de erro diferente de zero** para um dos lados.
 
    :   Neste caso, inicialmente somente o controle proporcional atua, ajustando a trajetória do robô em função do desequilíbrio de velocidades. Entretanto, **a medida que o somatório do erro cresce**, o **controle integral** passa a atuar. Quando o robô passar a **seguir linha** com **erro instantâneo zero**, o **controle integral** continua agindo equilibrando as velocidades a partir do **somatório de erro acumulado**.
-   :   Vemos esta ação como equivalente a eliminação do **erro residual**[[1]](#cite_note-OGATA-1) existente em alguns controles de ação proporcional.
+   :   Vemos esta ação como equivalente a eliminação do **erro residual** existente em alguns controles de ação proporcional.
 
 Caso de uma CURVA
 :   O **somatório de erros** será **diferente de zero** em função do lado da curva.
@@ -94,9 +94,9 @@ Construir protótipo Seguidor de Linha e experimentações para verificar a vali
 
 ### Tempo Derivativo
 
-Segundo [[2]](#cite_note-LabGaragem-2), o **tempo derivativo** está relacionado a **taxa de amostragem** dos **sensores**, que corresponde ao *loop* de execução do programa.
+O **tempo derivativo** está relacionado a **taxa de amostragem** dos **sensores**, que corresponde ao *loop* de execução do programa.
 
-Acelerar ou retardar o tempo derivativo pode fazer uma diferença significativa no desempenho do robô. Isso é definido pelas declarações de ***delay*** presentes no código [[2]](#cite_note-LabGaragem-2).
+Acelerar ou retardar o tempo derivativo pode fazer uma diferença significativa no desempenho do robô. Isso é definido pelas declarações de ***delay*** presentes no código.
 
 #### Problema IV: Verificação da ação do tempo derivativo
 
