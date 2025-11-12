@@ -52,11 +52,11 @@ Hardware do Robô Seguidor de Linha
 
 O **hardware** do **Robô Seguidor de Linha com Controle** PID possui como módulos principais um **Arduíno Micro**, um **vetor de sensores de reflectância QTR-8**, um **drive para motores DC L9110** e um **regulador de tensão**.
 
-[![](./img/300px-SeguidorLinhaPIDa.jpg)](/wiki/index.php/Arquivo:SeguidorLinhaPIDa.jpg)
+[![](./img/300px-SeguidorLinhaPIDa.jpg)]
 
 ### Arduíno Micro
 
-[![](./img/400px-PinosArduinoMicro.png)](/wiki/index.php/Arquivo:PinosArduinoMicro.png)
+[![](./img/400px-PinosArduinoMicro.png)]
 
 ### Vetor de sensores QTR-8
 
