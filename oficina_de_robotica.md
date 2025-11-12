@@ -17,25 +17,25 @@ Conteúdo da oficina sobre robótica com Arduíno
 
 [Descrição do Arduíno](arduino.md)
 
-[Arduíno: Saídas digitais e leds](/wiki/index.php/Arduino:_Entradas_e_Saidas#Sa.C3.ADdas_digitais "Arduino: Entradas e Saidas")
+[Arduíno: Saídas digitais e leds](arduino_entradas_e_saidas.md)
 
 [Vídeo Aula 1: Descrição do Arduíno e saídas digitais](https://drive.google.com/file/d/1RvvRnLqv-5uLYP7jwAOP_optM6iFOR0p/view?usp=sharing)
 
 ### Aula 2
 
-[Arduíno: Entradas digitais e chaves](/wiki/index.php/Arduino:_Entradas_e_Saidas#Entradas_digitais "Arduino: Entradas e Saidas")
+[Arduíno: Entradas digitais e chaves](arduino_entradas_e_saidas.md)
 
 [Vídeo Aula 2: Arduíno: Entradas digitais e chaves](https://drive.google.com/file/d/1l2PhlgPHH8qR0RcS7NQFNGaQNdeu2CWX/view?usp=sharing)
 
 ### Aula 3
 
-[Arduíno: Entradas analógicas](/wiki/index.php/Arduino:_Entradas_e_Saidas#Entradas_Analógicas "Arduino: Entradas e Saidas")
+[Arduíno: Entradas analógicas](arduino_entradas_e_saidas.md)
 
 [Vídeo Aula 3: Arduíno: Entradas analógicas](https://drive.google.com/file/d/1FMdcj7K-qKNwQr2oUaRkblhTyMCpsfW_/view?usp=sharing)
 
 ### Aula 4
 
-[Arduíno: Saídas analógicas](/wiki/index.php/Arduino:_Entradas_e_Saidas#Saídas_Analógicas "Arduino: Entradas e Saidas")
+[Arduíno: Saídas analógicas](arduino_entradas_e_saidas.md)
 
 [Vídeo Aula 4: Arduíno: Saídas analógicas](https://drive.google.com/file/d/1o3nCXAXjwliVZnjdxDFUfVPxCy4EatIn/view?usp=sharing)
 
