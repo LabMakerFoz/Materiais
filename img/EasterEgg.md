@@ -18,7 +18,7 @@ Olá! Eu sou **Guilherme C. Wernke**, criador deste GitHub, espero que esteja go
   </tr>
   <tr>
     <td><img src="1000064921.jpg"></td>
-    <td><img src="1000072234.webp" width="150px" style="border-radius:10px"></td>
+    <td><img src="1000072234.webp"></td>
   </tr>
 </table>
 
