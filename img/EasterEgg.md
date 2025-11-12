@@ -4,8 +4,6 @@
 
 <h1 style="font-size:2em; margin-bottom:0; border-bottom:none;">🎉 Parabéns! <br> Você encontrou um easter egg 🥚✨</h1>
 
----
-
 ###  Créditos  
 Olá! Eu sou **Guilherme C. Wernke**, criador deste GitHub, espero que esteja gostando!
 <br>
