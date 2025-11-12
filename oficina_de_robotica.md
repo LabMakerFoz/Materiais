@@ -5,8 +5,8 @@ Objetivo
 
 O objetivo da oficina de **Robótica** é preparar equipes de alunos para participar das competições da **Olimpíada de Robótica do IFPR**.
 
-![](./img/200px-Robotica2018-1.jpg)
-![](./img/200px-Robotica2018-2.jpg)
+![](./img/1000059917.jpg)
+![](./img/gmail_images20251112_104559.png)
 
 Esta oficina está voltada para a modalidade **Robótica Livre** permite que os robôs sejam construídos com materiais e componentes diversos e programados por qualquer sistema de microcontroladores, incluindo o Arduíno.
 
