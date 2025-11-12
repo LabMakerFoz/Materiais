@@ -24,12 +24,9 @@ Nesta oficina são desenvolvidos os conhecimentos básicos sobre o **[Arduíno](
 ### Materiais sobre robótica com Arduíno
 
 Sensores
-
-* [Sensores e atuadores utilizados nos robôs](/wiki/images/9/96/RoboticaSensores.pdf "RoboticaSensores.pdf")
+Sem Conteudo (temporário)
 
 Baterias
-
-* [Baterias utilizados nos robôs](/wiki/images/5/58/RoboticaBaterias.pdf "RoboticaBaterias.pdf")
 * [Como recuperar baterias baixas](https://www.youtube.com/watch?v=_fT_W3AwIT8)
 
 Seguidor de Linha com controle PID
