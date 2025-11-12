@@ -3,13 +3,13 @@
 Teoria sobre Sistemas de Controle PID
 -------------------------------------
 
-[Sistemas de Controle](/wiki/index.php/Sistemas_de_Controle "Sistemas de Controle")
+[Sistemas de Controle](sistemas_de_controles.md)
 :   Um resumo da teoria sobre **Sistemas de Controle em Malha Fechada** e do **Controle Proporcional Integral Derivativo**.
 
 Ações de Controle PID sobre o Seguidor de Linha
 -----------------------------------------------
 
-[Ações de Controle PID sobre o Seguidor de Linha](/wiki/index.php/A%C3%A7%C3%B5es_de_Controle_PID_sobre_o_Seguidor_de_Linha "Ações de Controle PID sobre o Seguidor de Linha")
+[Ações de Controle PID sobre o Seguidor de Linha](a_es_de_controle_pid_sobre_o_seguidor_de_linha.md)
 :   Descrição das ações de Controle PID sobre o Seguidor de Linha, hipóteses e problemas a serem experimentados.
 
 Controle de velocidade de robô Seguidor de Linha
@@ -73,7 +73,7 @@ Biblioteca para Arduíno
 Leitura dos sensores
 :   O programa utiliza uma função disponível na **biblioteca QTR-8** que fornece a **posição** do vetor em relação a linha, variando de 0 a 7000 (sensor 1 até sensor 8). Com o vetor no centro da linha retorna o valor 3500.
 
-[![](./img/400px-VetorSensoresQTR-RC.png)](/wiki/index.php/Arquivo:VetorSensoresQTR-RC.png)
+[![](./img/400px-VetorSensoresQTR-RC.png)]
 
 :   Cálculo do erro:
 
@@ -161,4 +161,4 @@ Artigos e TCCs
 Referências
 -----------
 
-1. ↑ [1,0](#cite_ref-LabGaragem_1-0) [1,1](#cite_ref-LabGaragem_1-1) <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
+1. (#cite_ref-LabGaragem_1-0) [1,1](#cite_ref-LabGaragem_1-1) <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
