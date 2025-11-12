@@ -16,10 +16,10 @@ Modalidades
 * Sumô 1 kg (Lego)
 * Mini Sumô 500 g **(Arduíno)**
 
-[Oficina de Robótica com Arduíno](/wiki/index.php/Oficina_de_Robotica "Oficina de Robotica")
+[Oficina de Robótica com Arduíno](oficina_de_robotica.md)
 --------------------------------------------------------------------------------------------
 
-Nesta oficina são desenvolvidos os conhecimentos básicos sobre o **[Arduíno](/wiki/index.php/Arduino "Arduino")**, assim como o uso de sensores de linha e controle de motores, necessários para a montagem de **Robôs Seguidores de Linha**.
+Nesta oficina são desenvolvidos os conhecimentos básicos sobre o **[Arduíno](arduino.md)**, assim como o uso de sensores de linha e controle de motores, necessários para a montagem de **Robôs Seguidores de Linha**.
 
 ### Materiais sobre robótica com Arduíno
 
@@ -35,7 +35,7 @@ Baterias
 Seguidor de Linha com controle PID
 ----------------------------------
 
-[Seguidor de Linha com controle PID](/wiki/index.php/Seguidor_de_Linha_com_controle_PID "Seguidor de Linha com controle PID")
+[Seguidor de Linha com controle PID](seguidor_de_linha_com_controle_pid.md)
 :   Página Wiki com resumo da **Teoria de Controle PID** e de uma forma de implementação deste tipo de controle em um **Robô Seguidor de Linha**.
 
 Robótica com Lego Mindstorms
