@@ -304,4 +304,4 @@ void loop(){
 Referências
 -----------
 
-1. (#cite_ref-FelipeFlop_1-0)  FelipeFlop. Motor DC com Driver Ponte H L298N, 2013. <https://www.filipeflop.com/blog/motor-dc-arduino-ponte-h-l298n/>
+1. FelipeFlop. Motor DC com Driver Ponte H L298N, 2013. <https://www.filipeflop.com/blog/motor-dc-arduino-ponte-h-l298n/>
