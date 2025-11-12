@@ -5,7 +5,8 @@
 <div class="easter-content">
 
 <h1 style="font-size:2em; margin-bottom:0; border-bottom:none;">🎉 Parabéns!</h1>
-## Você encontrou um easter egg 🥚✨
+
+# Você encontrou um easter egg 🥚✨
 
 ---
 
