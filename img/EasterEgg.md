@@ -11,8 +11,8 @@
 ---
 
 ### 👤 Créditos  
-Olá! Eu sou **Guilherme C. Wernke** 
-[@guilherm.cw](https://instagram.com/guilherm.cw)
+Olá! Eu sou **Guilherme C. Wernke
+[@guilherm.cw](https://instagram.com/guilherm.cw)**
 
 <table>
   <tr>
