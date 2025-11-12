@@ -1,8 +1,6 @@
 <div align="center" style="position: relative; overflow: hidden; padding: 40px; border-radius: 20px; background: rgba(0,0,0,0.6); color: white;">
 
-<div class="easter-bg"></div>
-
-<div class="easter-content">
+<div class="content">
 
 <h1 style="font-size:2em; margin-bottom:0; border-bottom:none;">🎉 Parabéns!</h1>
 
@@ -28,7 +26,7 @@ Olá! Eu sou **Guilherme C. Wernke
 
 ### 💬 Agradecimento  
 Quero agradecer a todos que contribuíram, exploraram e mantiveram vivo o espírito do **LabMaker**.  
-Este projeto representa esforço, aprendizado e criatividade — e espero que as futuras gerações aprendam com esse meu material de apoio e continue inspirando outros com a cultura Maker! 💡🤖  
+Este projeto representa esforço, aprendizado e criatividade, e espero que as futuras gerações aprendam com esse meu material de apoio e continue inspirando outros com a cultura Maker! 💡🤖  
 
 ---
 
