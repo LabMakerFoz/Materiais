@@ -138,11 +138,7 @@ Este módulo é provavelmente a melhor opção para seguidores de linha, oferece
 
 A referência [DroneBotWorkshop Driver TB6612FNG](https://dronebotworkshop.com/tb6612fng-h-bridge/) apresenta uma descrição detalhada deste módulo e a forma de utilização com o **Arduíno**, além de códigos e exemplos de uso. Vale a Pena Ver!
 
-<div>
-   
-   [?](./img/EasterEgg.md)
-   
-</div>
+[?](./img/EasterEgg.md)
 
 Sensor de Linha Infra Vermelho
 ------------------------------
