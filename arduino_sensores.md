@@ -7,8 +7,6 @@ Informações sobre Arduíno
 
 [Arduino](arduino.md)
 
-[Arduíno: Entradas e Saídas](/wiki/index.php/Arduino:_Entradas_e_Saidas "Arduino: Entradas e Saidas")
-
 [Site oficial do Arduíno](https://www.arduino.cc/)
 
 Sensor de Luminosidade LDR
