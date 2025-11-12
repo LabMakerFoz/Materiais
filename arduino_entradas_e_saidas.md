@@ -205,7 +205,7 @@ São **resistências variáveis** através de um cursor.
 
 :   Na figura, através de um **potenciômetro** é possível implementar um **divisor de tensão** com uma tensão variável Vx obtida a partir do terminal central do potenciômetro.
 
-![](./img/Potenciometro.png)](/wiki/index.php/Arquivo:Potenciometro.png) ![](./img/150px-Potenciometro.jpg)]
+![](./img/Potenciometro.png)] ![](./img/150px-Potenciometro.jpg)]
 
 ### Laboratório 3: Leitura de entrada analógica
 
