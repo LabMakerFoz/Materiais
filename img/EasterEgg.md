@@ -1,22 +1,5 @@
 <div align="center" style="position: relative; overflow: hidden; padding: 40px; border-radius: 20px; background: rgba(0,0,0,0.6); color: white;">
 
-<style>
-  /* GitHub ignora CSS externo, então isso aqui é só fallback visual local */
-  .easter-bg {
-    background-image: url('https://i.imgur.com/YOUR_BACKGROUND.jpg'); /* <- coloque um fundo bonito aqui */
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px) brightness(0.6);
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 0;
-  }
-  .easter-content {
-    position: relative;
-    z-index: 1;
-  }
-</style>
-
 <div class="easter-bg"></div>
 
 <div class="easter-content">
