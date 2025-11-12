@@ -15,6 +15,7 @@ Olá! Eu sou **Guilherme C. Wernke**, criador deste GitHub, espero que esteja go
   <tr>
     <td><img src="f57df981-505c-4fd3-9604-89275b3ee89c-1_all_9161.jpg"></td>
     <td><img src="1000064833.jpg"></td>
+    <br>
     <td><img src="1000064921.jpg"></td>
     <td><img src="1000072234.webp"></td>
   </tr>
