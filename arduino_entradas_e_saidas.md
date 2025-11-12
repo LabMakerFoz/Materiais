@@ -306,7 +306,7 @@ Cores primárias
 
 * Montar hardware para **led RGB anodo comum** utilizando **resistores** de proteção adequados.
 * Modificar programa ***blink*** para piscar cores **vermelho** (R), **verde** (G) e **azul** (B) alternadamente;
-* Variar a  **[frequência](/wiki/index.php/Frequ%C3%AAncia_e_per%C3%ADodo_de_um_sinal_peri%C3%B3dico "Frequência e período de um sinal periódico")** do piscar de leds RGB nos seguintes valores:
+* Variar a  **frequência** do piscar de leds RGB nos seguintes valores:
   + 1 Hz
   + 10 Hz
   + 100 Hz
