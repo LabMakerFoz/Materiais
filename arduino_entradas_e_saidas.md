@@ -49,11 +49,11 @@ digitalWrite
 Leds
 ----
 
-![](./img/600px-Arduino_Blink.png)]
+![](./img/600px-Arduino_Blink.png)
 
 Um **led** é um **diodo emissor de luz** (*light emitting diode*). Ele se comporta como um **Diodo**, conduzindo apenas quanto polarizado diretamente.
 
-![](./img/200px-Led.jpeg)]
+![](./img/200px-Led.jpeg)
 
 Um **led** não pode receber tensão diretamente em seus terminais sob risco de colocar o componente em **curto-circuito**. A **corrente elétrica** no led deve ser limitada, tipicamente entre **10 mA** a **30 mA** por um **resistor** externo.
 
@@ -133,7 +133,7 @@ Chave digital
 
 Uma **chave digital** fornecerá **0 V** (**LOW**) ou **5 V** (**HIGH**) caso estiver aberta ou fechada.
 
-![](./img/ChaveDigital.png)]
+![](./img/ChaveDigital.png)
 
 Funcionamento:
 
@@ -209,7 +209,7 @@ São **resistências variáveis** através de um cursor.
 
 ### Laboratório 3: Leitura de entrada analógica
 
-![](./img/600px-Arduino_Potenciometro.png)]
+![](./img/600px-Arduino_Potenciometro.png)
 
 analogRead
 
@@ -296,8 +296,8 @@ Os **leds RGB** são encontrados em duas estruturas:
 * Anodo comum;
 * Catodo comum.
 
-![](./img/250px-LedRGB.jpeg)]
-![](./img/LedRGB.png)]
+![](./img/250px-LedRGB.jpeg)
+![](./img/LedRGB.png)
 
 ### Laboratório 6: Led RGB
 
