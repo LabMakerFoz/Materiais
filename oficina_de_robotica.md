@@ -5,8 +5,8 @@ Objetivo
 
 O objetivo da oficina de **Robótica** é preparar equipes de alunos para participar das competições da **Olimpíada de Robótica do IFPR**.
 
-[![](./img/200px-Robotica2018-1.jpg)](/wiki/index.php/Arquivo:Robotica2018-1.jpg)
-[![](./img/200px-Robotica2018-2.jpg)](/wiki/index.php/Arquivo:Robotica2018-2.jpg)
+![](./img/200px-Robotica2018-1.jpg)
+![](./img/200px-Robotica2018-2.jpg)
 
 Esta oficina está voltada para a modalidade **Robótica Livre** permite que os robôs sejam construídos com materiais e componentes diversos e programados por qualquer sistema de microcontroladores, incluindo o Arduíno.
 
@@ -66,7 +66,7 @@ Obs:
 
 Este módulo utiliza o circuito integrado L298N, oferecendo plataforma pronta para **prototipagem** para controlar até dois motores de corrente contínua ou um motor de passo e pode ser comandado por microcontroladores como o Arduíno.
 
-[![](./img/250px-PonteH_L298N.jpg)](/wiki/index.php/Arquivo:PonteH_L298N.jpg)
+![](./img/250px-PonteH_L298N.jpg)
 
 A referência [FelipeFlop. Motor DC com Driver Ponte H L298N](https://www.filipeflop.com/blog/motor-dc-arduino-ponte-h-l298n/) apresenta uma descrição detalhada deste módulo e a forma de utilização com o **Arduíno**.
 
@@ -134,7 +134,7 @@ void loop()
 
 Este módulo é provavelmente a melhor opção para seguidores de linha, oferecendo plataforma pronta para **prototipagem** para controlar até dois motores de corrente contínua e pode ser comandado por microcontroladores como o Arduíno.
 
-ADD imagem
+![](./img/768px-TB6612FNG_pinout.png)
 
 A referência [DroneBotWorkshop Driver TB6612FNG](https://dronebotworkshop.com/tb6612fng-h-bridge/) apresenta uma descrição detalhada deste módulo e a forma de utilização com o **Arduíno**, além de códigos e exemplos de uso. Vale a Pena Ver!
 
