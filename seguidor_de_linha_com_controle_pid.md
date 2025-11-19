@@ -107,13 +107,13 @@ A comunicação usando Bluetooth foi construída baseado nos exemplos apresentad
 
 A primeira versão do **Seguidor de Linha** utilizava um **vetor com sete sensores** para seguir a linha e determinar o **erro** do robô em relação a linha.
 
-Dependendo da posição do vetor sobre a linha, **apenas um** ou **dois sensores** podem reconhecer a linha ao mesmo tempo, como mostra as figuras abaixo [[1]](#cite_note-LabGaragem-1):
+Dependendo da posição do vetor sobre a linha, **apenas um** ou **dois sensores** podem reconhecer a linha ao mesmo tempo, como mostra as figuras abaixo:
 
-[![](./img/300px-VetorSensores1.png)]
+(./img/300px-VetorSensores1.png)
 
 :   Apenas sensor central (s3) reconhece a linha.
 
-[![](./img/300px-VetorSensores2.png)]
+(./img/300px-VetorSensores2.png)
 
 :   Sensor central (s3) e sensor (s4) reconhecem a linha.
 
@@ -161,4 +161,4 @@ Artigos e TCCs
 Referências
 -----------
 
-1. (#cite_ref-LabGaragem_1-0) [1,1](#cite_ref-LabGaragem_1-1) <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
+1. <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
