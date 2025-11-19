@@ -41,7 +41,7 @@ velMotorDir = velNormal - Kp * erro = 120 - 20 * 1 = 100
 ```
 
 Ajuste dos parâmetros PID
-:   O projeto apresentado em [[1]](#cite_note-LabGaragem-1) utiliza motores de passo também controlados por modulação PWM. O autor sugere iniciar com **Kp = 25**, com **Ki = 0** e **Kd = 0**.
+:   O projeto apresentado em utiliza motores de passo também controlados por modulação PWM. O autor sugere iniciar com **Kp = 25**, com **Ki = 0** e **Kd = 0**.
 
     * Experimentalmente foi aumentando o valor de **Kp** de forma que o robô continuasse a seguir linha de forma **estável**. O autor chegou a um valor de **Kp** = 50 após testes.
     * Posteriormente, ajustou novo valor para **Kp** e **Kd** para **1/2 Kp** utilizado com o controle proporcional único e prosseguiu com novos testes.
