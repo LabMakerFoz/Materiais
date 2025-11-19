@@ -52,11 +52,11 @@ Hardware do Robô Seguidor de Linha
 
 O **hardware** do **Robô Seguidor de Linha com Controle** PID possui como módulos principais um **Arduíno Micro**, um **vetor de sensores de reflectância QTR-8**, um **drive para motores DC L9110** e um **regulador de tensão**.
 
-[![](./img/300px-SeguidorLinhaPIDa.jpg)]
+![](./img/300px-SeguidorLinhaPIDa.jpg)
 
 ### Arduíno Micro
 
-[![](./img/400px-PinosArduinoMicro.png)]
+![](./img/400px-PinosArduinoMicro.png)
 
 ### Vetor de sensores QTR-8
 
@@ -73,7 +73,7 @@ Biblioteca para Arduíno
 Leitura dos sensores
 :   O programa utiliza uma função disponível na **biblioteca QTR-8** que fornece a **posição** do vetor em relação a linha, variando de 0 a 7000 (sensor 1 até sensor 8). Com o vetor no centro da linha retorna o valor 3500.
 
-[![](./img/400px-VetorSensoresQTR-RC.png)]
+![](./img/400px-VetorSensoresQTR-RC.png)
 
 :   Cálculo do erro:
 
@@ -109,11 +109,11 @@ A primeira versão do **Seguidor de Linha** utilizava um **vetor com sete sensor
 
 Dependendo da posição do vetor sobre a linha, **apenas um** ou **dois sensores** podem reconhecer a linha ao mesmo tempo, como mostra as figuras abaixo:
 
-(./img/300px-VetorSensores1.png)
+![](./img/300px-VetorSensores1.png)
 
 :   Apenas sensor central (s3) reconhece a linha.
 
-(./img/300px-VetorSensores2.png)
+![](./img/300px-VetorSensores2.png)
 
 :   Sensor central (s3) e sensor (s4) reconhecem a linha.
 
