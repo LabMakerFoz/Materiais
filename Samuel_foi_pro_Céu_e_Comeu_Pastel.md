@@ -234,12 +234,36 @@ void loop()
   }
 }
 ```
-Para mais informações confira o repositório desta mesma conta denominado "roboPID"!
+Caso decida usar este código como modelo saiba das seguintes coisas:
+- Somente funciona com os sensroes QTR-8 e com a Ponte H TB6612FNG.
 
-Hardware do Robô Seguidor de Linha
+Calibração do PID
 ----------------------------------
 
-O **hardware** do **Robô Seguidor de Linha com Controle** PID possui como módulos principais um **Arduíno Nano**, um **vetor de sensores de reflectância QTR-8 tipo RC**, um **Ponte H TB6612FNG**, um **regulador de tensão** e uma **bateria  11v**.
+ **KP**
+ Os valores das constantes devem ser calibradas iniciando pelo KP em um valor aleatório e tendo KD e KI zerados, calibre até chegar em um desempenho que não de para aumentar ou diminuir o KP sem piorar o tempo de volta do robo, (use uma margem de erro). 
+ Nesse passo, se o robo começar a girar frenéticamente, diminua o KP, está ficando muito alto o valor de "Girar para o lado" do robô.
+ Caso ocorra do robô sair da pista **em curvas**, aumente o kp, o valor está baico enão está virando o suficient.
+
+ **KI**
+ Nessa etapa depois de calibrar o KP é importante notar uma coisa, se o robô tende a sair para um lado **nas retas**, de modo que ele sempre deve corrigir voltando para a pista, nesse caso começe com KI  muito baixo, (0.01) e aumente até isso parar de ocorrer, de preferencia para não usar, pois pode causar erros de sobrealimentação do valor do controle de velocidades dos motores / o valor de "Girar para o lado"!
+
+ **KD**
+ Começe assim como o KI (caso tenha o feito) por valores baixos (mas não tanto), em torno de 1 ou 5, o intuito do KD é deixar as curvas mais lisas e  rápidas, então **use o KD**.
+ Caso o robô ainda não esteja fazendo as curvas perfeittas como deseja, aumente o KD até o desejado, caso o robô pareça estar tendo vida própria e indo pro céu, diminua o KD até um valor aceitável de funcionamento.
+
+ Dicas:
+ - Caso esteja tendo dificuldades com a calibração das constantes, diminua a velocidade e tente denovo.
+ - Sempre confira a voltagem da bateria, antes de qualquer coisa!
+ - 
+
+
+Para mais informações confira o repositório desta mesma conta denominado "roboPID"!
+
+Hardware do Robô
+----------------------------------
+
+O **hardware** do Samuel possui como módulos principais um **Arduíno Nano**, um **vetor de sensores de reflectância QTR-8 tipo RC**, um **Ponte H TB6612FNG**, um **regulador de tensão** e uma **bateria  11v**.
 
 ![](./img/300px-SeguidorLinhaPIDa.jpg)
 
