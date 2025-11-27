@@ -16,10 +16,10 @@ Existem alguns Chassis  disponibilizados por este Veterano.
 * [10 - 9cm](https://www.tinkercad.com/things/674M23AQ8IG-chassi-pid-30-9cm?sharecode=VuWsXbfntqKQkLqW8n-Iqu1Yin6xo8c76XTaxZBWmFQ): Versão mais perto da origina feita pelo Marcelo.
 Nota, **NÃO IMPRIMIR EM 3D** pois tal não gera resistencia necessária para não envergar, o que posteriormente causa envergamento do chassi, perda de tração e instabilidade do robô.
 
-Controle de velocidade de robô Seguidor de Linha
+Controle de Velocidade e Código robô Seguidor de Linha
 ------------------------------------------------
 
-Meu robô Seguidor de Linha é equipado com dois motores de **corrente contínua** da Polulo, de 100rpm. Os quais tem seu **controle de velocidade** e **sentido de rotação** controladso a partir do módulo de ponte H TB6612FNG.
+Meu robô Seguidor de Linha é equipado com dois motores de **corrente contínua** da Polulo, de 100rpm. Os quais tem seu **controle de velocidade** e **sentido de rotação** controlado a partir do módulo de ponte H TB6612FNG.
 
 Arduíno
 :   O **Arduíno** equipado no robô é um arduino nano, na qual possui o seguinte código:
@@ -255,8 +255,6 @@ Calibração do PID
  Dicas:
  - Caso esteja tendo dificuldades com a calibração das constantes, diminua a velocidade e tente denovo.
  - Sempre confira a voltagem da bateria, antes de qualquer coisa!
- - 
-
 
 Para mais informações confira o repositório desta mesma conta denominado "roboPID"!
 
