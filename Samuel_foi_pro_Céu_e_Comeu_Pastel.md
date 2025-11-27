@@ -9,7 +9,7 @@ E que vocês caros girinos da programação, consigam melhorar este meu robô al
 
 Samuel foi pro Céu Comeu Pastel
 -----------------------------------------------
-![](./img/Samuel.png)
+![](./img/Samuel.jpg)
 O "corpo" de meu robô foi implementado seguindo o modelo desenhado por Marcelo A. de Freitas, veterano meu, cortado em acrilico  na cortadora a laser com auxilio do professor Alcione e Daniel.
 Existem alguns Chassis  disponibilizados por este Veterano.
 * [1.1 - 9cm](https://www.tinkercad.com/things/3KVw3moEzRr-copy-of-chassi-pid-11-9cm): Versão modelada levemente por mim
