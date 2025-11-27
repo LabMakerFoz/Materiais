@@ -19,9 +19,7 @@ Nota, **NÃO IMPRIMIR EM 3D** pois tal não gera resistencia necessária para n�
 Controle de velocidade de robô Seguidor de Linha
 ------------------------------------------------
 
-Meu robô Seguidor de Linha é equipado com dois motores de **corrente contínua** da Polulo, de 100rpm. Os quais tem seu **controle de velocidade** e **sentido de rotação** controladso a partir do módulo de ponte H TB6612FNG:
-
-![](./img/768px-TB6612FNG_pinout.png)
+Meu robô Seguidor de Linha é equipado com dois motores de **corrente contínua** da Polulo, de 100rpm. Os quais tem seu **controle de velocidade** e **sentido de rotação** controladso a partir do módulo de ponte H TB6612FNG.
 
 Arduíno
 :   O **Arduíno** equipado no robô é um arduino nano, na qual possui o seguinte código:
