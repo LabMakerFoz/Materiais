@@ -263,8 +263,6 @@ Hardware do Robô
 
 O **hardware** do Samuel possui como módulos principais um **Arduíno Nano**, um **vetor de sensores de reflectância QTR-8 tipo RC**, um **Ponte H TB6612FNG**, um **regulador de tensão** e uma **bateria  11v**.
 
-![](./img/300px-SeguidorLinhaPIDa.jpg)
-
 ### Arduíno Nano
 
 ![](./img/400px-PinosArduinoMicro.png)
