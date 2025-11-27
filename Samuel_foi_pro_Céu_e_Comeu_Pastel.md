@@ -19,46 +19,233 @@ Nota, **NÃO IMPRIMIR EM 3D** pois tal não gera resistencia necessária para n�
 Controle de velocidade de robô Seguidor de Linha
 ------------------------------------------------
 
-Um robô Seguidor de Linha equipado com dois motores de **corrente contínua**, os quais tem seu **controle de velocidade** e **sentido de rotação** a partir de **tensão elétrica** variável aplicada em seus terminais:
+Meu robô Seguidor de Linha é equipado com dois motores de **corrente contínua** da Polulo, de 100rpm. Os quais tem seu **controle de velocidade** e **sentido de rotação** controladso a partir do módulo de ponte H TB6612FNG:
 
-* **Sentido de rotação**: Tensão positiva gira em um sentido e tensão negativa em outro sentido;
-* **Velocidade**: Controlada pela amplitude da tensão aplicada.
+![](./img/768px-TB6612FNG_pinout.png)
 
-Arduíno e Ponte H
-:   O **Arduíno** equipado com um módulo **Ponte H** permite o controle de motores de corrente contínua através de **saídas digitais e analógicas**:
-
-1. O **sentido de rotação** dos motores é realizado a partir de **saídas digitais**, com LOW para um sentido e HIGH para o outro.
-2. O **controle da velocidade** dos motores é realizado a partir de **"saídas analógicas"**, com **modulação PWM** de 8 bits, correspondendo a valores decimais entre O e 255. Estes valores correspondem a faixa entre 0 V e 5 V em caso de tensão nominal de 5 V.
-
-:   Entretanto, dependendo dos motores, a faixa de ajuste da velocidades geralmente varia de **valorMínimo** a **255**, onde o valorMínimo é a modulação PWM mínima para romper a inércia dos motores (algo entre 60 e 80, dependendo do tipo de motores e do peso do robô).
-
-Funcionamento do Seguidor de Linha e a ação do Controle
-
-1. Suponha que um **Seguidor de Linha** seja programado para percorrer a pista com uma **velocidade normal** estabelecida com a modulação PWM **velNormal = 120** e que tenhamos somente o **controle proporcional** ativo, com **Kp = 20**.
-2. Suponha que em dado momento tenhamos **erro = 1**, com o robô derivando para esquerda.
-
-:   Neste caso, a ação do controle proporcional modificará a trajetória do robô aumentando a velocidade do motor esquerdo e diminuindo a velocidade do motor direito:
-
+Arduíno
+:   O **Arduíno** equipado no robô é um arduino nano, na qual possui o seguinte código:
 ```
-velMotorEsq = velNormal + Kp * erro = 120 + 20 * 1 = 140
-velMotorDir = velNormal - Kp * erro = 120 - 20 * 1 = 100
+// Inclui a biblioteca para controlar o driver de motores TB6612FNG
+#include <SparkFun_TB6612.h>
+
+// Inclui a biblioteca para ler os sensores de linha QTR
+#include <QTRSensors.h>
+
+// Cria um objeto chamado "qtr" para usar os métodos da biblioteca QTRSensors
+QTRSensors qtr;
+
+// Define quantos sensores QTR você está usando
+const uint8_t SensorCount = 8;
+
+// Cria um array para armazenar os valores lidos de cada sensor QTR
+uint16_t sensorValues[SensorCount];
+
+// Define os pinos conectados ao driver de motores TB6612FNG
+#define STBY 2    // Pino para ativar/desativar o driver (Standby)
+#define PWMA 5    // Pino PWM para motor A (Esquerdo)
+#define PWMB 6    // Pino PWM para motor B (Direito)
+#define AIN1 8    // Pinos de controle do motor A
+#define AIN2 9
+#define BIN1 10   // Pinos de controle do motor B
+#define BIN2 11
+
+// Ajusta a direção dos motores se necessário (1 ou -1)
+const int offsetA = 1;
+const int offsetB = 1;
+
+// Cria objetos para controlar cada motor usando a biblioteca TB6612
+// Motor esquerdo (motorEsq) e direito (motorDir)
+Motor motorEsq = Motor(AIN1, AIN2, PWMA, offsetA, STBY);
+Motor motorDir = Motor(BIN1, BIN2, PWMB, offsetB, STBY);
+
+// Variáveis usadas no controle PID
+int PID = 0;                  // Valor final do controle PID
+int somatorioErro = 0;        // Soma dos erros (usado para a parte integral do PID)
+int deltaErro = 0;            // Diferença entre erro atual e anterior (derivativo)
+int erroAnterior = 0;         // Armazena o erro anterior
+
+const int velInercia = 30;    // Velocidade mínima para o motor começar a girar
+int velMotor;                 // Velocidade calculada para aplicar no motor
+
+const int velPista = 100;     // "Velocidade base" do robô na pista (pode ajustar entre 0 e 100)
+
+// Constantes para o cálculo do PID
+
+const int Kp = 30;        // Proporcional | Arredondado para inteiro (você pode usar float se quiser)
+const int Kd = 10;         // Derivativo | Arredondado para inteiro
+const float Ki = 0.1;   // Integral | Use float para KI!
+
+// Variáveis para controlar a parada do robô
+int contFim = 5;              // Quantas vezes o sensor de parada deve ser ativado para parar de vez, adicionar o número de interceções +1 
+bool flagFim = false;         // Auxiliar para detectar transição do sensor
+const int sensorFim = A7;     // Pino do sensor de parada (analógico)
+const int LIMIAR_SENSOR = 800;
+
+void setup() 
+{
+
+  // Inicializa a comunicação serial para enviar informações para o computador
+  Serial.begin(9600);
+
+  // Configura os sensores QTR como tipo RC (recomenda usar RC para a maioria dos QTR)
+  qtr.setTypeRC();
+
+  // Define os pinos onde os sensores QTR estão conectados (ajuste para seus pinos)
+  qtr.setSensorPins((const uint8_t[]){A0, A1, A2, A3, A4, A5, 4, 3}, SensorCount);
+
+  // Configura o pino do LED embutido e do sensor de parada
+  pinMode(LED_BUILTIN, OUTPUT); // LED do Arduino para indicar calibração
+  pinMode(sensorFim, INPUT);    // Pino do sensor de parada como entrada
+
+  // Liga o LED do Arduino para avisar que vai calibrar os sensores
+  digitalWrite(LED_BUILTIN, HIGH);
+
+  // Calibra os sensores QTR (move o robô sobre a linha durante esse tempo)
+  // Faz 400 leituras para calibrar o mínimo/máximo de cada sensor
+  for (uint16_t i = 0; i < 400; i++) qtr.calibrate();
+
+  // Desliga o LED do Arduino, indicando que a calibração terminou
+  digitalWrite(LED_BUILTIN, LOW);
+
+  // Mostra na tela os valores mínimos capturados na calibração para cada sensor
+  for (uint8_t i = 0; i < SensorCount; i++) 
+  {
+    Serial.print(qtr.calibrationOn.minimum[i]);
+    Serial.print(' ');
+  }
+  Serial.println();
+
+  // Mostra na tela os valores máximos capturados na calibração para cada sensor
+  for (uint8_t i = 0; i < SensorCount; i++) 
+  {
+    Serial.print(qtr.calibrationOn.maximum[i]);
+    Serial.print(' ');
+  }
+  Serial.println("\n");
+
+  // Espera 2 segundos antes de começar o loop principal
+  delay(2000);
+
+}
+
+// Função para calcular o PID, que ajusta a velocidade dos motores para seguir a linha
+void calculaPID () 
+{
+
+  // Lê a posição da linha usando todos os sensores QTR
+  // O valor vai de 0 (linha totalmente na esquerda) até 7000 (linha totalmente na direita)
+  uint16_t position = qtr.readLineWhite(sensorValues);
+
+  // Calcula o erro: diferença entre o centro ideal (3500) e a posição atual
+  float erro = ((float)position - 3500) / 1000.0; // Normaliza para ficar entre -3.5 e +3.5
+
+  // Soma dos erros para o termo integral do PID
+  somatorioErro += erro;
+
+  // Diferença entre erro atual e anterior para o termo derivativo
+  deltaErro = erro - erroAnterior;
+
+  // Atualiza o erro anterior para a próxima rodada
+  erroAnterior = erro;
+
+  // Calcula o valor do PID (Proporcional + Integral + Derivativo)
+  PID = Kp * erro + Ki * somatorioErro + Kd * deltaErro;
+
+}
+
+// Função para ajustar os motores de acordo com o valor do PID (mantém o robô na linha)
+void segueLinha () 
+{
+
+  // Calcula a velocidade para cada motor (direito e esquerdo) usando o PID
+  int pwmDir = constrain(velPista + PID, -100, 100); // Motor direito
+  int pwmEsq = constrain(velPista - PID, -100, 100); // Motor esquerdo
+
+  // Calcula PWM para faixa completa do drive (positivo = frente, negativo = trás)
+  if (pwmDir > 0) 
+  {
+    pwmDir = map(pwmDir, 0, 100, velInercia, 255);
+  } 
+  else if (pwmDir < 0) 
+  {
+    pwmDir = -map(-pwmDir, 0, 100, velInercia, 255); // negativo para trás
+  }
+  motorDir.drive(pwmDir); // motorDir usa drive()
+
+  if (pwmEsq > 0) 
+  {
+    pwmEsq = map(pwmEsq, 0, 100, velInercia, 255);
+  } 
+  else if (pwmEsq < 0) 
+  {
+    pwmEsq = -map(-pwmEsq, 0, 100, velInercia, 255); // negativo para trás
+  }
+  motorEsq.drive(pwmEsq); // motorEsq usa drive()
+}
+
+// Função para parar ambos os motores
+void paraMotores() 
+{
+  motorDir.brake(); // Para o motor direito
+  motorEsq.brake(); // Para o motor esquerdo
+}
+
+// Função principal que fica repetindo enquanto o Arduino está ligado
+void loop() 
+{
+  
+  // Se o contador de final de pista for zero ou menor, para os motores
+  if (contFim <= 0) 
+  {
+    paraMotores();
+    Serial.println("Parou");
+  } 
+  else 
+  {
+    // Calcula o PID usando os sensores
+    calculaPID();
+
+    // Ajusta os motores de acordo com o valor do PID
+    segueLinha();
+    
+    // Lê o sensor de parada (detecta interseção)
+    int leituraSensorFim = analogRead(sensorFim);
+    Serial.print("Sensor parada: ");
+    Serial.println(leituraSensorFim);
+
+    // Libera flag quando volta para pista (valor < 800)
+    if (leituraSensorFim < LIMIAR_SENSOR && flagFim) 
+    {
+      flagFim = false;
+    }
+
+    // Detecta cruzamento de pista para linha: transição para valor >= 800
+    if (leituraSensorFim >= LIMIAR_SENSOR && !flagFim) 
+    {
+      contFim--;
+      flagFim = true;
+      Serial.print("Interseção detectada. Restam: ");
+      Serial.println(contFim);
+      if (contFim == 0) 
+      {
+        delay(0150);
+      }
+    }
+
+  }
+}
 ```
-
-Ajuste dos parâmetros PID
-:   O projeto apresentado em utiliza motores de passo também controlados por modulação PWM. O autor sugere iniciar com **Kp = 25**, com **Ki = 0** e **Kd = 0**.
-
-    * Experimentalmente foi aumentando o valor de **Kp** de forma que o robô continuasse a seguir linha de forma **estável**. O autor chegou a um valor de **Kp** = 50 após testes.
-    * Posteriormente, ajustou novo valor para **Kp** e **Kd** para **1/2 Kp** utilizado com o controle proporcional único e prosseguiu com novos testes.
-    * O autor não implementou o controle **Ki**.
+Para mais informações confira o repositório desta mesma conta denominado "roboPID"!
 
 Hardware do Robô Seguidor de Linha
 ----------------------------------
 
-O **hardware** do **Robô Seguidor de Linha com Controle** PID possui como módulos principais um **Arduíno Micro**, um **vetor de sensores de reflectância QTR-8**, um **drive para motores DC L9110** e um **regulador de tensão**.
+O **hardware** do **Robô Seguidor de Linha com Controle** PID possui como módulos principais um **Arduíno Nano**, um **vetor de sensores de reflectância QTR-8 tipo RC**, um **Ponte H TB6612FNG**, um **regulador de tensão** e uma **bateria  11v**.
 
 ![](./img/300px-SeguidorLinhaPIDa.jpg)
 
-### Arduíno Micro
+### Arduíno Nano
 
 ![](./img/400px-PinosArduinoMicro.png)
 
@@ -79,88 +266,10 @@ Leitura dos sensores
 
 ![](./img/400px-VetorSensoresQTR-RC.png)
 
-:   Cálculo do erro:
+### Ponte H TB6612FNG
 
-```
-erro = (posição - 3500)/1000 => -3,5 =< erro =< +3,5
-```
+![](./img/768px-TB6612FNG_pinout.png)
 
-### Drive para Motor DC L9110
-
-[Driver L9110](http://me.web2.ncut.edu.tw/ezfiles/39/1039/img/617/L9110_2_CHANNEL_MOTOR_DRIVER.pdf)
-
-Exemplo de uso:
-
-* [How-to-use-the-L9110](https://www.bananarobotics.com/shop/How-to-use-the-HG7881-(L9110)-Dual-Channel-Motor-Driver-Module)
-
-Outros protótipos de hardware testados
---------------------------------------
-
-### Ajuste de parâmetros via Bluetooth
-
-Para facilitar o ajuste dos parâmetros, foi introduzido um módulo bluetooth no robô para que os parâmetros sejam transferidos via Bluetooth de um aplicativo em um celular Android.
-
-O aplicativo foi desenvolvido com o [App Inventor](http://ai2.appinventor.mit.edu).
-
-A comunicação usando Bluetooth foi construída baseado nos exemplos apresentados em:
-
-* <https://appinventor.pevest.com/2015/01/23/part-1-basic-bluetooth-communications-using-app-inventor/>
-* <https://appinventor.pevest.com/2017/01/06/part-3-bluetooth-communications-with-2-arduino-devices-using-app-inventor/>
-
-### Vetor de Sensores e Determinação do Erro
-
-A primeira versão do **Seguidor de Linha** utilizava um **vetor com sete sensores** para seguir a linha e determinar o **erro** do robô em relação a linha.
-
-Dependendo da posição do vetor sobre a linha, **apenas um** ou **dois sensores** podem reconhecer a linha ao mesmo tempo, como mostra as figuras abaixo:
-
-![](./img/300px-VetorSensores1.png)
-
-:   Apenas sensor central (s3) reconhece a linha.
-
-![](./img/300px-VetorSensores2.png)
-
-:   Sensor central (s3) e sensor (s4) reconhecem a linha.
-
-Possibilidades para o vetor de sensores
-:   Quando o sensor central está sobre a linha o erro é zero.
-:   Quando o carrinho deriva para esquerda, sensibilizando os sensores a direita do ponto central, o erro é positivo. Quando deriva para direita, sensibilizando os sensores a esquerda do ponto central, o erro é negativo.
-
-```
-  Sensores
-0 1 2 3 4 5 6  
--------------
-1 0 0 0 0 0 0  --> Erro -6
-1 1 0 0 0 0 0  --> Erro -5
-0 1 0 0 0 0 0  --> Erro -4
-0 1 1 0 0 0 0  --> Erro -3
-0 0 1 0 0 0 0  --> Erro -2
-0 0 1 1 0 0 0  --> Erro -1
-0 0 0 1 0 0 0  --> Erro  0
-0 0 0 1 1 0 0  --> Erro  1
-0 0 0 0 1 0 0  --> Erro  2
-0 0 0 0 1 1 0  --> Erro  3
-0 0 0 0 0 1 0  --> Erro  4
-0 0 0 0 0 1 1  --> Erro  5
-0 0 0 0 0 0 1  --> Erro  6
-```
-
-Materiais sobre Seguidor de Linha com controle PID
---------------------------------------------------
-
-Projetos
-
-* <http://labdegaragem.com/profiles/blogs/tutorial-rob-seguidor-de-linha-com-controle-pid-e-ajustes-por>
-* <http://www.roboliv.re/conteudo/pid-controle-proporcional-integral-derivativo>
-* <http://www.andrix.com.br/robo-seguidor-de-linha-utilizando-um-controlador-proporcional-derivativo-pd-com-arduino/>
-* <http://www.andrix.com.br/robo-seguidor-de-linha-utilizando-um-controlador-proporcional-derivativo-pd-com-arduino/>
-* <https://www.instructables.com/id/PID-Based-Line-Following-Robot-With-POLALU-QTR-8RC/>
-
-Artigos e TCCs
-
-* <http://www2.uesb.br/computacao/wp-content/uploads/2014/09/ROB%C3%94-SEGUIDOR-DE-LINHA-AUT%C3%94NOMO-UTILIZANDO-O-CONTROLADOR-PROPORCIONAL-DERIVATIVO-EM-UMA-PLATAFORMA-DE-HARDWARE-SOFTWARE-LIVRE.pdf>
-* <http://sistemaolimpo.org/midias/uploads/230c61ca8833329f9ffc867a89566dcd.pdf>
-* <http://sistemaolimpo.org/midias/uploads/576de7878a7614e9d80c2907103fc4c7.pdf>
-* <http://repositorio.roca.utfpr.edu.br/jspui/bitstream/1/7105/1/PB_COENC_2016_1_04.pdf>
 
 Referências
 -----------
