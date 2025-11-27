@@ -288,6 +288,7 @@ Leitura dos sensores
 
 ### Ponte H TB6612FNG
 
+Note na imagem a baixo que tal Ponte H possui 2 PWM, ambos devem ser colocados **OBRIGATÓRIAMENTE** nos pinos PWM do Arduino, qualquer outro e não irá funcionar!!
 ![](./img/768px-TB6612FNG_pinout.png)
 
 
